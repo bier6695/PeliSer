@@ -5,17 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<link rel="icon" type="image/x-icon" href="https://xavierpro593.github.io/suareztvip/img/favicon.png" />	
-<title>CinePlay</title>
+<title>CineSeriesTv</title>
 <!-- Bootstrap -->
-<link rel="stylesheet" href="https://xavierpro593.github.io/suareztvip/app/bootstrap.min.css">
-<link rel="stylesheet" href="https://xavierpro593.github.io/suareztvip/Perfil-login/modsuarez.css">
-<link rel="stylesheet" href="https://xavierpro593.github.io/suareztvip/app/nav.bar.css">
+<link rel="stylesheet" href=" https://xavierpro593.github.io/suareztvip/app/bootstrap.min.css ">
+<link rel="stylesheet" href="https://xavierpro593.github.io/suareztvip/app/modsuarez2.css">
 <link rel="stylesheet" href="https://xavierpro593.github.io/suareztvip/app/fontawesome-pro.css">
-<link rel="stylesheet" href="https://xavierpro593.github.io/suareztvip/app/buscador.css">
-<script src="https://xavierpro593.github.io/suareztvip/app/estilo1.js"></script>
-<script src="https://xavierpro593.github.io/suareztvip/app/estilo2.js"></script>
 <script src="https://xavierpro593.github.io/suareztvip/app/jquery-1.11.3.min.js"></script> 
+<link rel="stylesheet" href="https://xavierpro593.github.io/suareztvip/Search/estilos.css">
+<script src="https://xavierpro593.github.io/suareztvip/Search/jquery.js"></script>
+<script src="https://xavierpro593.github.io/suareztvip/Search/jquery.dataTables.min.js"></script>
 </head>
 <body class="dark-mode">
 <div class="container-fluid">
@@ -24,120 +22,72 @@
 <div class="nav-bar-container" >
 <nav class="navbar bg-light left-navbar"  >
 <ul class="navbar-nav">
-<a class="btn  btn-subscription"><i class="fas fa-star"></i> Bienvenidos</a>
-<li class="nav-item active"><a  class="nav-link" href="#"> <i class="fas fa-home"></i> Home</a></li class="nav-item">
+<img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv.png">
+<a class="btn  btn-subscription"><i class="fas fa-star"></i> Bienvenido</a>
+<li class="nav-item active"><a  class="nav-link" href="/Megaplay/Home/Home.html"> <i class="fas fa-home"></i> Home</a></li class="nav-item">
 <li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/Todas las Películas.html"><i class="fas fa-film"></i>  Peliculas</a></li class="nav-item">
 <li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/Series.html"><i class="fas fa-tv-retro"></i> Series</a></li class="nav-item">
-<li class="nav-item"><a class="nav-link" href="#" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a></li class="nav-item">
-<li class="nav-item"><a class="nav-link" href="go:DMCA"><i class="fas fa-lock"></i> D M C A</a></li class="nav-item">
-</ul>
-</nav>
-</div>
-</div>
+<li class="nav-item"><a class="nav-link" href="https://tiomegaflix.github.io/Formulario/" target="_blank"><i class="fa fa-user-headset"></i> Soporte Técnico</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="/Megaplay/Home/DMCA.html"><i class="fas fa-lock"></i> D M C A</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="/Megaplay/Home/Politica-de-privacidad.html"><i class="fas fa-lock"></i> Política de privacidad</a></li class="nav-item">
+</ul></nav></div></div>
 <div class="close-menu-left-btn"></div>
 <div class="main">
 <div class="xs-header" >
 <button class="btn btn-primary float-left menu-left-btn"><i class="fas fa-bars"></i></button>
-<img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/cineplay.png">
+<img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv.png">
 <div class="btn-group  float-right " >
 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="for-desktop"> Megaplay </span> 
 <img src="https://xavierpro593.github.io/suareztvip/Perfil-login/Perfil1.jpg"></button>
 <div class="dropdown-menu dropdown-login">
 <a class="dropdown-item" href="http://action_exit"><i class="fas fa-sign-out-alt"></i> Salir</a>
-</div>
-</div>
-<button class="btn btn-primary float-right search-btn"><i class="fas fa-search"></i></button>
-</div>
+</div></div>
+<button class="btn btn-primary float-right search-btn"><i class="fas fa-search"></i></button></div>
 <div class="row top-nav">
 <div class="col-sm-3 col-md-3 " >
 <div class="tab-title">Estrenos</div>
 </div>
 <!---Inicio del Buscador Interno--->
 <div class="col-sm-6 col-md-6 search-form" >
-<input type="text" placeholder="Buscar Peliculas." id="inputBusqueda">
-<div class="search" id="search">
-<table class="search-table" id="searchTable">
-<thead>
-<tr>
-<td></td>
-</tr>
-</thead>
-<!-- las etiquetas <p> la puesdes poner despues del tutulo como palabra clave o titulo secundario --> 
-<tbody><tr><td>
-<a href="/PeliSer/Peliculas/Mortal Kombat.html">Godzilla vs Kong<p>2021</p>
-</a></td></tr>
-<tr><td>
-<a href="/PeliSer/Peliculas/Mortal Kombat.html">Mortal Kombat<p>2021</p>
-</a></td></tr>
-<tr><td>
-<a href="/PeliSer/Peliculas/Rapido-y-Furioso.html">Rapido-y-Furioso<p>2020</p>
-</a></td></tr>
+<input type="search" id="input-search" placeholder="Buscar aqui">
+<div class="content-search">
+<div class="content-table">
+<table id="table">
+<thead><tr><td></td></tr>
+</thead><tbody>
+<tr><td><a href="/PeliSer/Peliculas/Agencia Secreta de Control Mágico.html">Agencia Secreta de Control Magico</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Despierta la Furia.html">Despierta la Furia</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El Conjuro 3 - El Diablo me Obligó a Hacerlo">El Conjuro 3 - El Diablo me Obligo a Hacerlo</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El ejército de los Muertos.html">El ejercito de los Muertos</a></td></tr>
 <!---Copia esto para la siguiente Busqueda--->
-<tr><td>
-<a href="/PeliSer/Peliculas/Raya y el último dragón.html">Raya y el último dragón<p>2021</p>
-</a></td></tr>
-<tr><td>
-<a href="/PeliSer/Peliculas/Tom y Jerry.html">Tom y Jerry<p>2021</p>
-</a></td></tr>
-<tr><td>
-<a href="/PeliSer/Peliculas/El ejército de los Muertos.html">El ejército de los Muertos<p>2021</p>
-</a></td></tr>
-<tr><td>
-<a href="/PeliSer/Peliculas/Despierta la Furia.html">Despierta la Furia<p>2021</p>
-</a></td></tr>
-<tr><td>
-<a href="/PeliSer/Peliculas/NOBODY - Nadie.html">NOBODY - Nadie<p>2021</p>
-</a></td></tr>
-<tr><td>
-<a href="/PeliSer/Peliculas/El Conjuro 3 - El Diablo me Obligó a Hacerlo.html">El Conjuro 3 - El Diablo me Obligó a Hacerlo<p>2021</p>
-</a></td></tr>
-<tr><td>
-<a href="/PeliSer/Peliculas/Rogue Warfare.html">Rogue Warfare<p>2019</p>
-</a></td></tr>
-<a href="/PeliSer/Peliculas/Tom y Jerry.html">Monster Hunter<p>2020</p>
-</a></td></tr>
-<a href="/PeliSer/Serie/Loki.html">Loki<p>2021</p>
-</a></td></tr>
-<a href="/PeliSer/Serie/Superman y Lois.html">Superman y Lois<p>2021</p>
-</a></td></tr>
-<a href="/PeliSer/Serie/Falcon y el Soldado de Invierno.html">Falcon y el Soldado de Invierno<p>2021</p>
-</a></td></tr>
-<a href="/PeliSer/Serie/Lupín.html">Lupín<p>2021</p>
-</a></td></tr>
-<a href="/PeliSer/Serie/Ciudad Invisible.html">Ciudad Invisible<p>2021</p>
-</a></td></tr>
-<a href="/PeliSer/Serie/Dancing Queens.html">Dancing Queens<p>2021</p>
-</a></td></tr>
-<a href="/PeliSer/Serie/Slaxx.html">Slaxx<p>2020</p>
-</a></td></tr>
-<a href="/PeliSer/Serie/Agencia Secreta de Control Mágico.html">Agencia Secreta de Control Mágico<p>2021</p>
-</a></td></tr>
-<a href="/PeliSer/Serie/Fuerza Trueno.html">Fuerza Trueno<p>2021</p>
-</a></td></tr>
-<a href="/PeliSer/Serie/Agencia Secreta de Control Mágico.html">Agencia Secreta de Control Mágico<p>2021</p>
-</a></td></tr>
-<a href="/PeliSer/Serie/Agencia Secreta de Control Mágico.html">Agencia Secreta de Control Mágico<p>2021</p>
-</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Mortal Kombat.html">Mortal Kombat</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Monster Hunter.html">Monster Hunter</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/NOBODY - Nadie.html">NOBODY Nadie</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Rapido-y-Furioso.html">Rapido y Furioso</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Raya y el último dragón.html">Raya y el ultimo dragon</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Rogue Warfare.html">Rogue Warfare</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Trolls 2 - gira mundial.html">Trolls 2 gira mundial</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Tom y Jerry.html">Tom y Jerry</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Slaxx.html">Slaxx</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Lupín.html">Lupin</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Loki.html">Loki</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Superman y Lois.html">Superman y Lois</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Falcon y el Soldado de Invierno.html">Falcon y el Soldado de Invierno</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Ciudad Invisible.html">Ciudad Invisible</a></td></tr>
+
+
 <!---Pega aqui el codigo del Buscador para una nueva Busqueda--->
-
 <!---No tocar esto--->
-</tbody>
-</table>
-</div>
+</tbody></table></div></div>
 <!---fin del Buscador Interno--->
-
-<button class="btn btn-primary float-right for-phone search-btn-close"><i class="fas fa-times"></i></button>
-</div>
+<button class="btn btn-primary float-right for-phone search-btn-close"><i class="fas fa-times"></i></button></div>
 <div class="col-sm-3 col-md-3 account-action for-desktop">
 <div class="float-right">
 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="for-desktop"> Megaplay </span> 
 <img src="https://xavierpro593.github.io/suareztvip/Perfil-login/Perfil1.jpg"></button>
 <div class="dropdown-menu dropdown-login">
 <a class="dropdown-item" href="http://action_exit"><i class="fas fa-sign-out-alt"></i> Salir</a>
-</div>
-</div>
-</div>
-</div>
+</div></div></div></div>
 <!---Slider tipo Portada--->
 <div class="content">
 <div class="row content-section">
@@ -650,6 +600,6 @@
 <script src="https://xavierpro593.github.io/suareztvip/app/script.js" ></script>
 <script src="https://xavierpro593.github.io/suareztvip/app/buscador.js"></script>
 <script src="https://xavierpro593.github.io/suareztvip/app/swiper-bundle.min.js"></script>
-
+<script src="https://xavierpro593.github.io/suareztvip/Search/search.js"></script>
 </body>
 </html>
