@@ -1,49 +1,27 @@
-<style type='text/css'>
-/* Blog Pager */
-#blog-pager{display:table;text-align:center;padding:20px 0;margin:0 auto;border-bottom:1px solid rgba(0,0,0,0.05);border-top:1px solid rgba(0,0,0,0.05);width:100%}
-#blog-pager-newer-link,#blog-pager-older-link{float:none;display:inline-block;margin:0 5px}
-#blog-pager a{display:block;border:1px solid;margin:0;padding:0 15px;width:45px;font-size:20px;line-height:24px;color:#ff5000;font-weight:400;border-radius:3px;z-index:90}
-#blog-pager a:hover{background:#ff5000;color:#fff;border-color:#ff5000}
-#blog-pager .home-link{display:none}
-#HTML98{margin:0 auto 20px auto}
-</style>
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script type='text/javascript'>
-//<![CDATA[
-/*! jQuery Migrate v3.0.1 | (c) jQuery Foundation and other contributors | jquery.org/license */
-void 0===jQuery.migrateMute&&(jQuery.migrateMute=!0),function(e){"function"==typeof define&&define.amd?define(["jquery"],window,e):"object"==typeof module&&module.exports?module.exports=e(require("jquery"),window):e(jQuery,window)}(function(e,t){"use strict";function r(r){var n=t.console;a[r]||(a[r]=!0,e.migrateWarnings.push(r),n&&n.warn&&!e.migrateMute&&(n.warn("JQMIGRATE: "+r),e.migrateTrace&&n.trace&&n.trace()))}function n(e,t,n,o){Object.defineProperty(e,t,{configurable:!0,enumerable:!0,get:function(){return r(o),n},set:function(e){r(o),n=e}})}function o(e,t,n,o){e[t]=function(){return r(o),n.apply(this,arguments)}}e.migrateVersion="3.0.1",t.console&&t.console.log&&(e&&!/^[12]\./.test(e.fn.jquery)||t.console.log("JQMIGRATE: jQuery 3.0.0+ REQUIRED"),e.migrateWarnings&&t.console.log("JQMIGRATE: Migrate plugin loaded multiple times"),t.console.log("JQMIGRATE: Migrate is installed"+(e.migrateMute?"":" with logging active")+", version "+e.migrateVersion));var a={};e.migrateWarnings=[],void 0===e.migrateTrace&&(e.migrateTrace=!0),e.migrateReset=function(){a={},e.migrateWarnings.length=0},"BackCompat"===t.document.compatMode&&r("jQuery is not compatible with Quirks Mode");var i,s=e.fn.init,u=e.isNumeric,c=e.find,l=/\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/,d=/\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/g;e.fn.init=function(e){var t=Array.prototype.slice.call(arguments);return"string"==typeof e&&"#"===e&&(r("jQuery( '#' ) is not a valid selector"),t[0]=[]),s.apply(this,t)},e.fn.init.prototype=e.fn,e.find=function(e){var n=Array.prototype.slice.call(arguments);if("string"==typeof e&&l.test(e))try{t.document.querySelector(e)}catch(o){e=e.replace(d,function(e,t,r,n){return"["+t+r+'"'+n+'"]'});try{t.document.querySelector(e),r("Attribute selector with '#' must be quoted: "+n[0]),n[0]=e}catch(e){r("Attribute selector with '#' was not fixed: "+n[0])}}return c.apply(this,n)};for(i in c)Object.prototype.hasOwnProperty.call(c,i)&&(e.find[i]=c[i]);e.fn.size=function(){return r("jQuery.fn.size() is deprecated and removed; use the .length property"),this.length},e.parseJSON=function(){return r("jQuery.parseJSON is deprecated; use JSON.parse"),JSON.parse.apply(null,arguments)},e.isNumeric=function(t){var n,o,a=u(t),i=(o=(n=t)&&n.toString(),!e.isArray(n)&&o-parseFloat(o)+1>=0);return a!==i&&r("jQuery.isNumeric() should not be called on constructed objects"),i},o(e,"holdReady",e.holdReady,"jQuery.holdReady is deprecated"),o(e,"unique",e.uniqueSort,"jQuery.unique is deprecated; use jQuery.uniqueSort"),n(e.expr,"filters",e.expr.pseudos,"jQuery.expr.filters is deprecated; use jQuery.expr.pseudos"),n(e.expr,":",e.expr.pseudos,"jQuery.expr[':'] is deprecated; use jQuery.expr.pseudos");var p=e.ajax;e.ajax=function(){var e=p.apply(this,arguments);return e.promise&&(o(e,"success",e.done,"jQXHR.success is deprecated and removed"),o(e,"error",e.fail,"jQXHR.error is deprecated and removed"),o(e,"complete",e.always,"jQXHR.complete is deprecated and removed")),e};var f=e.fn.removeAttr,y=e.fn.toggleClass,m=/\S+/g;e.fn.removeAttr=function(t){var n=this;return e.each(t.match(m),function(t,o){e.expr.match.bool.test(o)&&(r("jQuery.fn.removeAttr no longer sets boolean properties: "+o),n.prop(o,!1))}),f.apply(this,arguments)},e.fn.toggleClass=function(t){return void 0!==t&&"boolean"!=typeof t?y.apply(this,arguments):(r("jQuery.fn.toggleClass( boolean ) is deprecated"),this.each(function(){var r=this.getAttribute&&this.getAttribute("class")||"";r&&e.data(this,"__className__",r),this.setAttribute&&this.setAttribute("class",r||!1===t?"":e.data(this,"__className__")||"")}))};var h=!1;e.swap&&e.each(["height","width","reliableMarginRight"],function(t,r){var n=e.cssHooks[r]&&e.cssHooks[r].get;n&&(e.cssHooks[r].get=function(){var e;return h=!0,e=n.apply(this,arguments),h=!1,e})}),e.swap=function(e,t,n,o){var a,i,s={};h||r("jQuery.swap() is undocumented and deprecated");for(i in t)s[i]=e.style[i],e.style[i]=t[i];a=n.apply(e,o||[]);for(i in t)e.style[i]=s[i];return a};var g=e.data;e.data=function(t,n,o){var a;if(n&&"object"==typeof n&&2===arguments.length){a=e.hasData(t)&&g.call(this,t);var i={};for(var s in n)s!==e.camelCase(s)?(r("jQuery.data() always sets/gets camelCased names: "+s),a[s]=n[s]):i[s]=n[s];return g.call(this,t,i),n}return n&&"string"==typeof n&&n!==e.camelCase(n)&&(a=e.hasData(t)&&g.call(this,t))&&n in a?(r("jQuery.data() always sets/gets camelCased names: "+n),arguments.length>2&&(a[n]=o),a[n]):g.apply(this,arguments)};var v=e.Tween.prototype.run,j=function(e){return e};e.Tween.prototype.run=function(){e.easing[this.easing].length>1&&(r("'jQuery.easing."+this.easing.toString()+"' should use only one argument"),e.easing[this.easing]=j),v.apply(this,arguments)},e.fx.interval=e.fx.interval||13,t.requestAnimationFrame&&n(e.fx,"interval",e.fx.interval,"jQuery.fx.interval is deprecated");var Q=e.fn.load,b=e.event.add,w=e.event.fix;e.event.props=[],e.event.fixHooks={},n(e.event.props,"concat",e.event.props.concat,"jQuery.event.props.concat() is deprecated and removed"),e.event.fix=function(t){var n,o=t.type,a=this.fixHooks[o],i=e.event.props;if(i.length)for(r("jQuery.event.props are deprecated and removed: "+i.join());i.length;)e.event.addProp(i.pop());if(a&&!a._migrated_&&(a._migrated_=!0,r("jQuery.event.fixHooks are deprecated and removed: "+o),(i=a.props)&&i.length))for(;i.length;)e.event.addProp(i.pop());return n=w.call(this,t),a&&a.filter?a.filter(n,t):n},e.event.add=function(e,n){return e===t&&"load"===n&&"complete"===t.document.readyState&&r("jQuery(window).on('load'...) called after load event occurred"),b.apply(this,arguments)},e.each(["load","unload","error"],function(t,n){e.fn[n]=function(){var e=Array.prototype.slice.call(arguments,0);return"load"===n&&"string"==typeof e[0]?Q.apply(this,e):(r("jQuery.fn."+n+"() is deprecated"),e.splice(0,0,n),arguments.length?this.on.apply(this,e):(this.triggerHandler.apply(this,e),this))}}),e.each("blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup contextmenu".split(" "),function(t,n){e.fn[n]=function(e,t){return r("jQuery.fn."+n+"() event shorthand is deprecated"),arguments.length>0?this.on(n,null,e,t):this.trigger(n)}}),e(function(){e(t.document).triggerHandler("ready")}),e.event.special.ready={setup:function(){this===t.document&&r("'ready' event is deprecated")}},e.fn.extend({bind:function(e,t,n){return r("jQuery.fn.bind() is deprecated"),this.on(e,null,t,n)},unbind:function(e,t){return r("jQuery.fn.unbind() is deprecated"),this.off(e,null,t)},delegate:function(e,t,n,o){return r("jQuery.fn.delegate() is deprecated"),this.on(t,e,n,o)},undelegate:function(e,t,n){return r("jQuery.fn.undelegate() is deprecated"),1===arguments.length?this.off(e,"**"):this.off(t,e||"**",n)},hover:function(e,t){return r("jQuery.fn.hover() is deprecated"),this.on("mouseenter",e).on("mouseleave",t||e)}});var x=e.fn.offset;e.fn.offset=function(){var n,o=this[0],a={top:0,left:0};return o&&o.nodeType?(n=(o.ownerDocument||t.document).documentElement,e.contains(n,o)?x.apply(this,arguments):(r("jQuery.fn.offset() requires an element connected to a document"),a)):(r("jQuery.fn.offset() requires a valid DOM element"),a)};var k=e.param;e.param=function(t,n){var o=e.ajaxSettings&&e.ajaxSettings.traditional;return void 0===n&&o&&(r("jQuery.param() no longer uses jQuery.ajaxSettings.traditional"),n=o),k.call(this,t,n)};var A=e.fn.andSelf||e.fn.addBack;e.fn.andSelf=function(){return r("jQuery.fn.andSelf() is deprecated and removed, use jQuery.fn.addBack()"),A.apply(this,arguments)};var S=e.Deferred,q=[["resolve","done",e.Callbacks("once memory"),e.Callbacks("once memory"),"resolved"],["reject","fail",e.Callbacks("once memory"),e.Callbacks("once memory"),"rejected"],["notify","progress",e.Callbacks("memory"),e.Callbacks("memory")]];return e.Deferred=function(t){var n=S(),o=n.promise();return n.pipe=o.pipe=function(){var t=arguments;return r("deferred.pipe() is deprecated"),e.Deferred(function(r){e.each(q,function(a,i){var s=e.isFunction(t[a])&&t[a];n[i[1]](function(){var t=s&&s.apply(this,arguments);t&&e.isFunction(t.promise)?t.promise().done(r.resolve).fail(r.reject).progress(r.notify):r[i[0]+"With"](this===o?r.promise():this,s?[t]:arguments)})}),t=null}).promise()},t&&t.call(n,n),n},e.Deferred.exceptionHook=S.exceptionHook,e});
-//]]>
-</script>
-
-<script type='text/javascript'>
-$(document).ready(function() {
-$(".contenido_tab").hide(); //Ocultar capas
-$("ul.tabs li:first").addClass("activa").show(); //Activar primera pestaña
-$(".contenido_tab:first").show(); //Mostrar contenido primera pestaña
-
-// Sucesos al hacer click en una pestaña
-$("ul.tabs li").click(function() {
-$("ul.tabs li").removeClass("activa"); //Borrar todas las clases "activa"
-$(this).addClass("activa"); //Añadir clase "activa" a la pestaña seleccionada
-$(".contenido_tab").hide(); //Ocultar todo el contenido de la pestaña
-var activatab = $(this).find("a").attr("href"); //Leer el valor de href para identificar la pestaña activa
-$(activatab).fadeIn(); //Visibilidad con efecto fade del contenido activo
-return false;
-});
-});
-</script>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/estilo.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 </head>
-
-<style type="text/css">
-ul.tabs{width:100%;max-width:800px;margin:0 auto;padding:0;list-style:none;height:35px;font-size:0;line-height:0;}
-ul.tabs li{display:inline-block;width:33.33%;margin:0;padding:0;height:35px;line-height:35px;background:#050606;overflow:hidden;position:relative;border:0px solid #fff;border-bottom:0;box-sizing:border-box;border-radius:0px 0px 0 0;}
-ul.tabs li a{display:block;text-decoration:none;color:#fff;font-size:14px;text-align:center;border:0px solid #fff;box-sizing:border-box;border-radius:0px 0px 0 0;}
-ul.tabs li a:hover{background:red;}
-ul.tabs li.activa,ul.tabs li.activa a,ul.tabs li.activa a:hover{color:#fff;font-weight:700;background:red;}
-.contenedor_tab{width:100%;max-width:800px;margin:-1px auto 0;padding:0;background:#fff;border:0px solid #fff;border-top:0;box-sizing:border-box;border-radius:0 0 0px 0px;}
-.contenido_tab{padding:10px;font-size:14px;box-sizing:border-box;}
-</style>
+<div id="notc"></div>
+<div id="myList"></div>
+<div class="storeSP"></div>
+<div class="Wallpaper" style="background-image: linear-gradient(rgba(41, 128, 185, 0), rgb(0, 0, 0)), url(https://www.themoviedb.org/t/p/w500_and_h282_face/xXHZeb1yhJvnSHPzZDqee0zfMb6.jpg);"></div>
+<div class="ConjuntoHeadCont">
+<div class="SingleHead">
+<img src="https://www.themoviedb.org/t/p/w220_and_h330_face/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg" alt="White Lines" title="White Lines"></div>
+</div>
+<b><span style="color: #fff;">Rápidos y Furiosos 9</span></b><br/>
+<b><span style="color: #F44336;">Año:</span></b> <span style="color: #b3b3b3;">2021</span><br />
+<b><span style="color: #F44336;">Genero:</span></b> <span style="color: #b3b3b3;">Acción, Aventura, Crimen</span><br />
+<b><span style="color: #F44336;">Duración:</span></b> <span style="color: #b3b3b3;">2h 25m</span><br />
+</div></div><center>
+  <!--Aqui va la calificacion-->
 
 <div id="wpac-rating"></div>
 <script type="text/javascript">
@@ -59,27 +37,15 @@ wpac_init.push({widget: 'Rating', id: 31107});
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
 })();
 </script>
-<a href="https://widgetpack.com" class="wpac-cr">Dale tu Calificación</a>
-
-
-<ul class="tabs">
-<li><a href="#tab1">Servidor 1</a></li>
-<li><a href="#tab2">SERVIDOR 2</a></li>
-<li><a href="#tab3">SERVIDOR 3</a></li>
-</ul>
-<div class="contenedor_tab">
-
-  
-<div class="contenido_tab" id="tab2">
-<a><iframe allowfullscreen="" frameborder="0" height="220px" id="iframe2" onload="$('.iframe-loading').css('background-image', 'none');" sandbox="allow-same-origin allow-scripts" scrolling="no" src="https://uqload.com/embed-vcu87ipu6hl8.html" style="border: none;" width="100%"></iframe><span style="color: #009FFF;">SERVIDOR 1</span></a>
+<a href="https://widgetpack.com" class="wpac-cr"></a>
+<!--fin de la calificación-->
+<div class="movie_desc">
+<p class="text"><span style="color: #F44336;">Sinopsis:</span></b> <span style="color: #b3b3b3;">Domic Toretto lleva una vida tranquila, lejos de todo, con Letty y su hijo, el pequeño Brian. el peligro está siempre al acecho. Esta vez, esta amenaza obligará a Domic Toretto a enfrentarse a los pecados de su pasado para salvar a los que más quiere. Su equipo se reúne de nuevo para detener un plan que conmocionará al mundo, liderado por el mejor piloto y el mayor asesino que han encontrado: Jakob, el hermano abandonado de Domic.</span></center><br>
 </div>
-  
-<div class="contenido_tab" id="tab2">
-No hay contenido agregado
-</div>
+<br>
 
-<div class="contenido_tab" id="tab3">
-No hay contenido agregado</div>
+
+
 
 <div id="disqus_thread"></div>
 <script>
@@ -100,9 +66,7 @@ No hay contenido agregado</div>
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">Comentarios</a></noscript>
-  
-</div>
-<div style="clear: both;">
-</div></div>
-<br />
-         
+
+
+</body>
+</html>
