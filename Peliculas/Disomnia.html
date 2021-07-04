@@ -1,86 +1,34 @@
-<HTML>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recolector</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/estilo.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="https://xavierpro593.github.io/Team-Suareztv/Recolector/Recolector.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700">
-<link rel="stylesheet" href="https://xavierpro593.github.io/suareztvip/app/fontawesome-pro.css">
-<meta name="robots" content="noindex,nofollow">
 </head>
-<body class="directAc" style="">
-<div id="DisplayContent">
-<div id="PlayerDisplay">
-<div class="SelectLangDisp">
-<li onclick="SelLang(this, 'LAT');" class="SLD_A"><img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv%20png.png"></li>
-<li onclick="SelLang(this, 'LAT2');" class=""><img src="https://xavierpro593.github.io/Team-Suareztv/Recolector/Play-button3.png"></li>
+<div id="notc"></div>
+<div id="myList"></div>
+<div class="storeSP"></div>
+<div class="Wallpaper" style="background-image: linear-gradient(rgba(41, 128, 185, 0), rgb(0, 0, 0)), url(https://www.themoviedb.org/t/p/w500_and_h282_face/4GANLhzt7sukxpBSeAJxlwH0hMs.jpg);"></div>
+<div class="ConjuntoHeadCont">
+<div class="SingleHead">
+<img src="https://www.themoviedb.org/t/p/w220_and_h330_face/r8kmQ1lBmeC5oLztNKQUBB6xh8i.jpg" alt="White Lines" title="White Lines"></div>
 </div>
-<!--Datos de la Pelicula-->
-<div class="OptionsLangDisp">
-<div class="ODDIV">
-<div class="OD OD_LAT REactiv">
-<!--Aqui va la Portada de la Pelicula-->
-<center><img width="100%" src="https://www.themoviedb.org/t/p/originahttps://www.themoviedb.org/t/p/original/sGTL1ZgE0w21XwbtdP7B9RaKLYA.jpg"></center>
-<!--Aqui va el Titulo de la Pelicula-->
-<center><h2>🎬Disomnia🎬</center><br>
+<b><span style="color: #fff;">Disomnia</span></b><br/>
+<b><span style="color: #F44336;">Año:</span></b> <span style="color: #b3b3b3;">2021</span><br />
+<b><span style="color: #F44336;">Genero:</span></b> <span style="color: #b3b3b3;">Drama • Acción • Aventura • Thirller • Ciencia Ficción</span><br />
+<b><span style="color: #F44336;">Duración:</span></b> <span style="color: #b3b3b3;">1h 36m</span><br />
+</div></div><center>
+<div class="movie_desc">
+<p class="text"><span style="color: #F44336;">Sinopsis:</span></b> <span style="color: #b3b3b3;">Tras un suceso global repentino que acaba con todos los dispositivos electrónicos y con la capacidad para dormir de la humanidad, el caos comienza a consumir el mundo rápidamente. Solo Jill, un exsoldado con un pasado problemático, podría tener la clave de la cura en su propia hija. La cuestión es ¿podrá Jill entregar a su hija de manera segura y salvar al mundo antes de que ella misma pierda la cabeza? Tras un suceso global repentino que acaba con todos los dispositivos electrónicos y con la capacidad para dormir de la humanidad, el caos comienza a consumir el mundo rápidamente. Solo Jill, un exsoldado con un pasado problemático, podría tener la clave de la cura en su propia hija. La cuestión es ¿podrá Jill entregar a su hija de manera segura y salvar al mundo antes de que ella misma pierda la cabeza?</span></center>
+</div>
 <br>
 
-<!--Aqui va las calificaciones-->
-<div id="wpac-rating"></div>
-<script type="text/javascript">
-wpac_init = window.wpac_init || [];
-wpac_init.push({widget: 'Rating', id: 31107});
-(function() {
-    if ('WIDGETPACK_LOADED' in window) return;
-    WIDGETPACK_LOADED = true;
-    var mc = document.createElement('script');
-    mc.type = 'text/javascript';
-    mc.async = true;
-    mc.src = 'https://embed.widgetpack.com/widget.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
-})();
-</script>
-<a href="https://widgetpack.com" class="wpac-cr">Calificación</a>
-<!--Aqui va el Año de la Pelicula-->
-<p><span style="color: #F44336;">📌Año:</span><span style="color: #FEFFFF;"> 2021</span></p>
-<!--Aqui va el Año de la Pelicula-->
-<p><span style="color: #F44336;">📌 Duración:</span><span style="color: #FEFFFF;"> 1h 36m</span></p>
-<!--Aqui va el Genero de la Pelicula-->
-<p><span style="color: #F44336;">📌Género:</span><span style="color: #FEFFFF;">Drama • Acción • Aventura • Thirller • Ciencia Ficción</span></p>
-<p><span style="color: #F44336;">📌Sinopsis:</span><span style="color: #FEFFFF;"></span></p>
-<!--Aqui va la Sinopsis de la Pelicula-->
-<center>➡️
-Tras un suceso global repentino que acaba con todos los dispositivos electrónicos y con la capacidad para dormir de la humanidad, el caos comienza a consumir el mundo rápidamente. Solo Jill, un exsoldado con un pasado problemático, podría tener la clave de la cura en su propia hija. La cuestión es ¿podrá Jill entregar a su hija de manera segura y salvar al mundo antes de que ella misma pierda la cabeza? 
-</center><br>
-
-<br>
-<center><a class="bt1" onclick="window.open('https://bier6695.github.io/Formulario/Soporte-tecnico.html');"><i class="fa fa-user-headset"></i> Soporte Técnico</a>
-<a class="bt1" onclick="window.open('https://bier6695.github.io/Formulario/Solicitar-contenido.html');"><i class="fa fa-film"></i> Solicitar Contenido</a>
-</center><br>
-<br>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://bier6695.github.io/PeliSer/
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://https-bier6695-github-io-peliser.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">Comentarios</a></noscript>
 
 
-<xs></xs></div>
 <style>
 body{
 margin:0;
@@ -104,69 +52,129 @@ width:50%;
 padding:10;}
 </style>
 
-<!--Aqui van los enlaces de las Peliculas en cada # debes agregar una URL de la Pelicula-->
-<div class="OD OD_LAT2">
-<li onclick="go_to_player('https://www.youtube.com/embed/akwOkH6LPmg')">
-<img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Formulario/trailer.png">
-<span>Trailer</span>
-<p>Latino</p>
-</li>
-<li onclick="go_to_player('https://v2.zplayer.live/embed/px0qzl9bcknn')">
-<img src="https://xavierpro593.github.io/Team-Suareztv/Recolector/LAT.png">
-<span>Servidor 1</span>
-<p>Subtitulado</p>
-</li>
-<li onclick="go_to_player('https://jawcloud.co/embed-xpiq4ldmdm8o.html')">
-<img src="https://xavierpro593.github.io/Team-Suareztv/Recolector/LAT.png">
-<span>Servidor 2</span>
-<p>Latino</p>
-</li>
-<li onclick="go_to_player('https://entrepeliculasyseries.io/ir.php?server=fe&value=RG1sSS9JTlhIK2FuT2l4RTlwL2lrQT09')">
-<img src="https://xavierpro593.github.io/Team-Suareztv/Recolector/LAT.png">
-<span>Servidor 3</span>
-<p>Latino</p>
-</li>
-<li onclick="go_to_player('https://uqload.com/embed-m70ivvpw8nab.html')">
-<img src="https://xavierpro593.github.io/Team-Suareztv/Recolector/LAT.png">
-<span>Servidor 4</span>
-<p>Latino</p>
-</li>
-<li onclick="go_to_player('https://evoload.io/e/Pclnte1PvYkiNL')">
-<img src="https://xavierpro593.github.io/Team-Suareztv/Recolector/LAT.png">
-<span>Servidor 5</span>
-<p>Latino</p>
-</li>
-<li onclick="go_to_player('https://stream02.peliscloud.net/public/dist/index.html?id=46d79f97177c6370b449fb959882e437')">
-<img src="https://xavierpro593.github.io/Team-Suareztv/Recolector/LAT.png">
-<span>Servidor 6</span>
-<p>Latino</p>
-</li>
-<li onclick="go_to_player('https://entrepeliculasyseries.io/ir.php?server=fe&value=SzNyNUUwUE9qcm02T2wxbmt0Q3Brdz09')">
-<img src="https://xavierpro593.github.io/Team-Suareztv/Recolector/SUB.png">
-<span>Servidor 7</span>
-<p>Subtitulado</p>
-</li>
-<li onclick="go_to_player('https://uqload.com/embed-elagdihvklem.html')">
-<img src="https://xavierpro593.github.io/Team-Suareztv/Recolector/SUB.png">
-<span>Servidor 8</span>
-<p>Subtitulado</p>
-</li>
-<li onclick="go_to_player('https://evoload.io/e/Os0lCCAZsoonSg')">
-<img src="https://xavierpro593.github.io/Team-Suareztv/Recolector/SUB.png">
-<span>Servidor 9</span>
-<p>Subtitulado</p>
-</li>
-<li onclick="go_to_player('https://stream02.peliscloud.net/public/dist/index.html?id=efed5f254569aed5e0fa87c2d8279d9a')">
-<img src="https://xavierpro593.github.io/Team-Suareztv/Recolector/SUB.png">
-<span>Servidor 10</span>
-<p>Subtitulado</p>
-</li></div>
-<!--No tocar esto-->
-</div></div></div>
-<div class="FirstLoad"></div>
-<div class="BotHumano"></div>
-<div class="DisplayVideo"></div>
+<br>
+<center><a class="bt1" onclick="window.open('https://www.youtube.com/embed/akwOkH6LPmg');"><i class="fa fa-user-headset"></i> Trailer</a>
+<a class="bt1" href="mailto:cineplaysoporte@gmail.com?Subject=Solicitud%20de%20Contenido%20Cineseriestv"><i class="fa fa-film"></i> Solicitar Contenido</a>
+</center><br>
+<br>
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Language" content="es"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8"/>
+<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/5ow5995vgsawtab/stylesplus.css">
+</head>
+<body>
+
+<section>
+<div class="war">
+<i class="ion-ios-play"></i> Está película se encuentra en buena calidad, puedes seleccionar el idioma y el servidor <img src="https://dl.dropbox.com/s/wka3aktqqh2167b/hd.png"> en el reproductor.
 </div>
-<script src="https://xavierpro593.github.io/Team-Suareztv/Recolector/Recolector-antiads.js"></script>
+<div class="ti">
+<h2>Reproducción</h2>
+</div>
+<ul class="tabm">
+<li class="se"><img src=" https://dl.dropbox.com/s/ntcwvboqqjw9mk0/latino.svg " alt="Latino"> Latino</li>
+<li><img src=" https://www.pelispluss.org/cdn/subtitulado.svg " alt="Subtitulado"> Subtitulado</li>
+
+
+
+</ul>
+<div class="tabc">
+<div class="tb se">
+<div class="drop"><div class="m"><div class="hd">HD</div>
+<div class="txt">Servidor</div>
+<span class="ico ion-arrow-down-b"></span></div>
+<div class="s"><ul>
+
+<li u="https://bier6695.github.io/Pelis/Zplayer/Disomnia.html">
+<i class="ion-ios-fastforward"></i> Servidor Zplayer</li>
+<li u="https://bier6695.github.io/Pelis/Jawcloud/Disomnia.html">
+<i class="ion-ios-fastforward"></i> Servidor Jawcloud</li>
+<li u="https://bier6695.github.io/Pelis/Uqload/Disomnia.html">
+<i class="ion-ios-fastforward"></i> Servidor Uqload</li>
+<li u="https://bier6695.github.io/Pelis/Evoload/Disomnia.html">
+<i class="ion-ios-fastforward"></i> Servidor Evoload</li>
+<li u="https://bier6695.github.io/Pelis/Pelisplus/Disomnia.html">
+<i class="ion-ios-fastforward"></i> Servidor Fembed</li>
+<li u="https://bier6695.github.io/Pelis/Peliscloud/Disomnia.html">
+<i class="ion-ios-fastforward"></i> Servidor Peliscloud</li>
+
+
+<small>La diferencia entre cada servidor es la velocidad de reproducción.</small></ul>
+</div></div></div>
+<!--Servidores en Igles-->
+<div class="tb"><div class="drop">
+<div class="m"><div class="hd">HD</div>
+<div class="txt">Servidor</div><span class="ico ion-arrow-down-b"></span></div>
+<div class="s"><ul>
+<li u="https://bier6695.github.io/Pelis/Uqload/Disomnia ING.html">
+<i class="ion-ios-fastforward"></i> uqload ING</li>
+<li u="https://bier6695.github.io/Pelis/Evoload/Disomnia ING.html">
+<i class="ion-ios-fastforward"></i> Evoload ING</li>
+<li u="https://bier6695.github.io/Pelis/Evoload/Disomnia ING.html">
+<i class="ion-ios-fastforward"></i> Peliscloud ING</li>
+<li u="https://bier6695.github.io/Pelis/Evoload/Disomnia ING.html">
+<i class="ion-ios-fastforward"></i> Fembed ING</li>
+
+
+
+<small>La diferencia entre cada servidor es la velocidad de reproducción.</small></ul>
+</div></div></div>
+<!--Servidores en Inglés-->
+<div class="tb "><div class="drop">
+<div class="m"><div class="hd">HD</div>
+<div class="txt">Servidor</div><span class="ico ion-arrow-down-b"></span></div>
+<div class="s"><ul>
+<li u="https://bier6695.github.io/Pelis/Uqload/Cruella ESP.html">
+<i class="ion-ios-fastforward"></i> Uqload ING</li>
+<li u="https://bier6695.github.io/Pelis/Evoload/Cruella ESP.html">
+<i class="ion-ios-fastforward"></i> Evoload ING</li>
+
+
+
+<small>La diferencia entre cada servidor es la velocidad de reproducción.</small></ul>
+</div></div></div>
+
+<div class="embed"><span class="ion-ios-lightbulb lgtbx-lnk ani"></span>
+<div class="bg">
+<img src="https://www.themoviedb.org/t/p/w500_and_h282_face/sGTL1ZgE0w21XwbtdP7B9RaKLYA.jpg">
+<i class="ion-ios-play"></i></div>
+<div class="ply vd"></div></div></div></div>
+<span class=lgtbx></span>
+<span class="bgtbx"></span>
+</section>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-bier6695-github-io-peliser.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">Comentarios.</a></noscript>
+
+
+
+
+<script type="text/javascript" src="https://dl.dropbox.com/s/etanh3lsmtcs4m1/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://dl.dropbox.com/s/q9p8nru03bamoc5/script.js"></script>
 </body>
 </html>
