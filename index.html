@@ -6,11 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv.png" />	
-<title>CineSeriesTv</title>
-<!-- Bootstrap -->
-<link rel="stylesheet" href="https://bier6695.github.io/PeliSer/Archivos/bootstrap.min.css">
-<link rel="stylesheet" href="https://bier6695.github.io/PeliSer/Archivos/style.css">
-<script src="https://bier6695.github.io/PeliSer/Archivos/font-awesome.js"></script>
+<title>CineSeriesTv</title><!-- Bootstrap -->
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/bootstrap.min.css">
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/style.css">
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/fontawesome-pro.css">
+<script src="https://bier6695.github.io/documentos/src/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/estilosearch.css">
+<script src="https://bier6695.github.io/documentos/src/jquery.js"></script>
+<script src="https://bier6695.github.io/documentos/src/jquery.dataTables.min.js"></script>
+<script src="https://bier6695.github.io/documentos/src/font-awesome.jsy"></script>
 </head>
 <body class="dark-mode">
 <div class="container-fluid">
@@ -46,17 +50,50 @@
 <div class="col-sm-3 col-md-3 " >
 <div class="tab-title">Estrenos</div>
 </div>
+<!---Inicio del Buscador Interno--->
 <div class="col-sm-6 col-md-6 search-form" >
-<form action="/search" class="navbar-form" role="search">
-<div class="search-group">
-<i class="fas fa-search"></i>
-<input type="text" class="form-control" placeholder="Buscar..." name="q">
-<button class="btn btn-default" type="submit">Search</button>
-</div></form>
+<input type="search" id="input-search" placeholder="Buscar aqui">
+<div class="content-search">
+<div class="content-table">
+<table id="table">
+<thead><tr><td></td></tr>
+</thead><tbody>
+<tr><td><a href="/PeliSer/Peliculas/Agencia Secreta de Control Mágico.html">Agencia Secreta de Control Magico</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Despierta la Furia.html">Despierta la Furia</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El Conjuro 3 - El Diablo me Obligó a Hacerlo">El Conjuro 3 - El Diablo me Obligo a Hacerlo</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El ejército de los Muertos.html">El ejercito de los Muertos</a></td></tr>
+<!---Copia esto para la siguiente Busqueda--->
+<tr><td><a href="/PeliSer/Peliculas/Mortal Kombat.html">Mortal Kombat</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Monster Hunter.html">Monster Hunter</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/NOBODY - Nadie.html">NOBODY Nadie</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Rapido-y-Furioso.html">Rapido y Furioso</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Raya y el último dragón.html">Raya y el ultimo dragon</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Rogue Warfare.html">Rogue Warfare</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Trolls 2 - gira mundial.html">Trolls 2 gira mundial</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Tom y Jerry.html">Tom y Jerry</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Slaxx.html">Slaxx</a></td></tr>
+<tr><td><a href="#"></a></td></tr>
+<tr><td><a href="#"></a></td></tr>
+<tr><td><a href="#"></a></td></tr>
+<tr><td><a href="#"></a></td></tr>
+<tr><td><a href="#"></a></td></tr>
+<tr><td><a href="#"></a></td></tr>
+<tr><td><a href="#"></a></td></tr>
+<tr><td><a href="#"></a></td></tr>
+<tr><td><a href="#"></a></td></tr>
+<tr><td><a href="#"></a></td></tr>
+<tr><td><a href="#"></a></td></tr>
+<tr><td><a href="#"></a></td></tr>
+<!---Copia esto para la siguiente Busqueda--->
+<tr><td><a href="#"></a></td></tr>
+<!---Pega aqui el codigo del Buscador para una nueva Busqueda--->
+<!---No tocar esto--->
+</tbody></table></div></div>
+<!---fin del Buscador Interno--->
 <button class="btn btn-primary float-right for-phone search-btn-close"><i class="fas fa-times"></i></button></div>
 <div class="col-sm-3 col-md-3 account-action for-desktop">
 <div class="float-right">
-<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="for-desktop"> CineSeriesTv </span> 
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="for-desktop"> Megaplay </span> 
 <img src="https://bier6695.github.io/PeliSer/Archivos/perfil.jpg"></button>
 <div class="dropdown-menu dropdown-login">
 <a class="dropdown-item" href="http://action_exit"><i class="fas fa-sign-out-alt"></i> Salir</a>
@@ -691,9 +728,12 @@
 </div>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://bier6695.github.io/PeliSer/Archivos/jquery.min.js"></script>
-<script src="https://bier6695.github.io/PeliSer/Archivos/popper.min.js"></script>
-<script src="https://bier6695.github.io/PeliSer/Archivos/bootstrap.min.js"></script>
-<script src="https://bier6695.github.io/PeliSer/Archivos/app.js"></script>
+<script src="https://bier6695.github.io/documentos/src/jquery.min.js"></script>
+<script src="https://bier6695.github.io/documentos/src/popper.min.js"></script>
+<script src="https://bier6695.github.io/documentos/src/bootstrap.min.js"></script>
+<script src="https://bier6695.github.io/documentos/src/app.js"></script>
+<script src="https://bier6695.github.io/documentos/src/buscador.js"></script>
+<script src="https://bier6695.github.io/documentos/src/swiper-bundle.min.js"></script>
+<script src="https://bier6695.github.io/documentos/src/search.js"></script>
 </body>
 </html>
