@@ -127,7 +127,7 @@ padding:10;}
   <style>
 body {
   background-color: #ecf0f1;
-  text-align: center;
+  text-align: ;
   min-height: 100vh;
 }
 .flx {
@@ -231,6 +231,103 @@ body {
 
 
 
+
+
+<!-- COMMENTS POWERBAR: Place it where you want SHARES to be displayed -->
+<div class="vuukle-powerbar"></div>
+
+
+
+
+
+<!-- EMOTES WRAPPER: Place it where you want emotes to be displayed -->
+<div id="vuukle-emote"></div>
+
+
+
+
+
+<!-- COMMENTS WRAPPER: Place it where you want comments to be displayed -->
+<div id="vuukle-comments"></div>
+
+
+<script type="text/javascript">
+
+  var VUUKLE_CONFIG = {
+    "apiKey": "c88dc361-5cf3-47e9-b66a-80bd85fbb6a9",
+    "host": "google.com.do",
+    "articleId": "!!! GENERATE UNIQUE ID FOR YOUR ARTICLE !!!",
+    "img": "!!! ARTICLE IMAGE URL !!!",
+    "tags": "!!! UP TO 3 TAGS SEPARATED BY COMMA !!!",
+    "url": "https://google.com.do",
+    "title": "string",
+    "author": "string",
+    "language": "es",
+    "recommendedArticles": false,
+    "globalRecommendations": false,
+    "wideImages": false,
+    "comments": {
+        "enabled": true,
+        "hideRecommendedArticles": false,
+        "editorOptions": [
+            "bold",
+            "italic",
+            "underline",
+            "url",
+            "blockquote",
+            "code",
+            "list",
+            "image",
+            "gif"
+        ],
+        "transliteration": {
+            "language": "en",
+            "enabledByDefault": false
+        },
+        "hideCommentInputBox": false,
+        "commentingClosed": false,
+        "maxChars": 3000,
+        "countToLoad": 5
+    },
+    "emotes": {
+        "enabled": true,
+        "hideRecommendedArticles": false,
+        "size": "80px",
+        "disable": [
+            5,
+            6
+        ]
+    },
+    "powerbar": {
+        "enabled": true,
+        "defaultEmote": 1,
+        "verticalPosition": "10px",
+        "items": [
+            "whatsapp",
+            "telegram",
+            "email",
+            "facebook"
+        ],
+        "customUrls": {
+            "facebook": "https://www.facebook.com/helpbier/",
+            "whatsapp": "https://wa.me/message/SRUZUAUHERGHN1",
+            "email": "mailto:cineplaysoporte@gmail.com",
+            "telegram": "https://msng.link/o/?Cineseriestvapp=tg"
+        },
+        "mode": "horizontal"
+    }
+};
+
+  //⛔️ DON'T EDIT BELOW THIS LINE
+  (function() {
+    var d = document,
+        s = d.createElement('script');
+        
+    s.src = 'https://cdn.vuukle.com/platform.js';
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+  
   <div class='demo-content'>
     <div class="nshare">
       <a class="nshare-item nshare-fb" href="https://www.facebook.com/helpbier/">
@@ -255,6 +352,7 @@ body {
     </div>
   </div>
 </div>
+
 	
 
 
