@@ -256,103 +256,115 @@ body {
   </div>
 </div>
 	
-	<!DOCTYPE html>
-<html>
-<!---EL GATOCODER SIGUE MI CANAL EN YOUTUBE PARA PROGRAMAS Y CODIGOS canal de youtube: Tegar Dev   ----->
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Comentarios</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
- 
-<body>
-    <header></header>
-    <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand" href="#">El Gato Coder</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse"
-                id="navcol-1">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="https://www.youtube.com/channel/UCKqkc2QNHUvxsxCW1ptFNkQ">Youtube</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Facebook</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Instagram</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
- 
- 
-        <div class="container">
- 
- 
- 
-    <div class="col-md-6 pane">
-  <div class="col-md-4">
-			<div class="alert alert-light"><h4>Comentarios</h4></div>
-			</div>
-			<div id="result">
- 
- 
- 
- 
-		</div>
- 
-    <div class="col-md-8">
-        <form>
-            <div class="form-group">
-			<label>Nombre</label>
-			<input class="form-control" type="text"  id="name">
-			</div>
-            <div class="form-group">
-			<label>Comentario</label>
-			<textarea id="comment" class="form-control"></textarea></label>
-			</div>
-			<button type="button" class="btn btn-primary" onclick="commentBox();">Enviar</button>
-        </form>
-    </div>
- 
- 
- 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
- 
-	<script src="assets/js/script.js"></script>
-	</div>
-	</div>
-</body>
- 
-</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- COMMENTS POWERBAR: Place it where you want SHARES to be displayed -->
+<div class="vuukle-powerbar"></div>
+
+
+
+
+
+<!-- EMOTES WRAPPER: Place it where you want emotes to be displayed -->
+<div id="vuukle-emote"></div>
+
+
+
+
+
+<!-- COMMENTS WRAPPER: Place it where you want comments to be displayed -->
+<div id="vuukle-comments"></div>
+
+
+<script type="text/javascript">
+
+  var VUUKLE_CONFIG = {
+    "apiKey": "c88dc361-5cf3-47e9-b66a-80bd85fbb6a9",
+    "host": "google.com.do",
+    "articleId": "!!! GENERATE UNIQUE ID FOR YOUR ARTICLE !!!",
+    "img": "!!! ARTICLE IMAGE URL !!!",
+    "tags": "!!! UP TO 3 TAGS SEPARATED BY COMMA !!!",
+    "url": "https://google.com.do",
+    "title": "string",
+    "author": "string",
+    "language": "es",
+    "recommendedArticles": false,
+    "globalRecommendations": false,
+    "wideImages": false,
+    "comments": {
+        "enabled": true,
+        "hideRecommendedArticles": false,
+        "editorOptions": [
+            "bold",
+            "italic",
+            "underline",
+            "url",
+            "blockquote",
+            "code",
+            "list",
+            "image",
+            "gif"
+        ],
+        "transliteration": {
+            "language": "en",
+            "enabledByDefault": false
+        },
+        "hideCommentInputBox": false,
+        "commentingClosed": false,
+        "maxChars": 3000,
+        "countToLoad": 5
+    },
+    "emotes": {
+        "enabled": true,
+        "hideRecommendedArticles": false,
+        "size": "80px",
+        "disable": [
+            5,
+            6
+        ]
+    },
+    "powerbar": {
+        "enabled": true,
+        "defaultEmote": 1,
+        "verticalPosition": "10px",
+        "items": [
+            "whatsapp",
+            "telegram",
+            "email",
+            "facebook"
+        ],
+        "customUrls": {
+            "facebook": "https://www.facebook.com/helpbier/",
+            "whatsapp": "https://wa.me/message/SRUZUAUHERGHN1",
+            "email": "mailto:cineplaysoporte@gmail.com",
+            "telegram": "https://msng.link/o/?Cineseriestvapp=tg"
+        },
+        "mode": "horizontal"
+    }
+};
+
+  //⛔️ DON'T EDIT BELOW THIS LINE
+  (function() {
+    var d = document,
+        s = d.createElement('script');
+        
+    s.src = 'https://cdn.vuukle.com/platform.js';
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+  
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script function commentBox(){
-	var name=document.getElementById('name').value;
-	var comment=document.getElementById('comment').value;
- 
-	if(name =="" || comment ==""){
-		alert("Porfavor introduce la informacion requerida!");
-	}else{
-		var parent=document.createElement('div');
-		var el_name=document.createElement('h5');
-		var el_message=document.createElement('p');
-		var el_line=document.createElement('hr');
-		var txt_name=document.createTextNode(name);
-		var txt_message=document.createTextNode(comment);
-		el_name.appendChild(txt_name);
-		el_message.appendChild(txt_message);
-		el_line.style.border='1px solid #000';
-		parent.appendChild(el_name);
-		parent.appendChild(el_line);
-		parent.appendChild(el_message);
-		parent.setAttribute('class', 'pane');
-		document.getElementById('result').appendChild(parent);
- 
-		document.getElementById('name').value="";
-		document.getElementById('comment').value="";
-	}
- 
-}></script>
 <script src="https://bier6695.github.io/documentos/src/jquery.min.js"></script>
 <script src="https://bier6695.github.io/documentos/src/popper.min.js"></script>
 <script src="https://bier6695.github.io/documentos/src/bootstrap.min.js"></script>
