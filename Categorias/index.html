@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv.png" />	
+<title>CineSeriesTv</title><!-- Bootstrap -->
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/bootstrap.min.css">
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/style.css">
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/fontawesome-pro.css">
+<script src="https://bier6695.github.io/documentos/src/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/estilosearch.css">
+<script src="https://bier6695.github.io/documentos/src/jquery.js"></script>
+<script src="https://bier6695.github.io/documentos/src/jquery.dataTables.min.js"></script>
+<script src="https://bier6695.github.io/documentos/src/font-awesome.jsy"></script>
+<!-- Codigo para blokear adblock inicio --> 
+ 
+    <style type='text/css'> 
+/* Animation */ 
+@keyframes fadeInDown{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}} 
+@keyframes rubberBand{from{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,0.75,1)}40%{transform:scale3d(0.75,1.25,1)}50%{transform:scale3d(1.15,0.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}to{transform:scale3d(1,1,1)}} 
+/* Say Hi to Adblock */ 
+#arlinablock{background:rgba(0,0,0,0.65);position:fixed;margin:auto;left:0;right:0;top:0;bottom:0;overflow:auto;z-index:999999;animation:fadeInDown 1s} 
+#arlinablock .header{margin:0 0 15px 0} 
+#arlinablock .inner{background:#e3482d;color:#fff;box-shadow:0 5px 20px rgba(0,0,0,0.1);text-align:center;width:600px;padding:40px;border-radius:5px;margin:7% auto 2% auto;animation:rubberBand 1s} 
+#arlinablock button{padding:10px 20px;border:0;background:rgba(0,0,0,0.15);color:#fff;margin:20px 5px;cursor:pointer;transition:all .3s} 
+#arlinablock button:hover{background:rgba(0,0,0,0.35);color:#fff;outline:none} 
+#arlinablock button.active,#arlinablock button:hover.active{background:#fff;color:#222;outline:none} 
+#arlinablock .fixblock{background:#fff;text-align:left;color:#000;padding:20px;height:250px;overflow:auto;line-height:30px} 
+#arlinablock .fixblock div{display:none} 
+#arlinablock .fixblock div.active{display:block} 
+#arlinablock ol{margin-left:20px} 
+@media(max-width:768px){#arlinablock .inner{width:calc(100% - 20px);margin:10px auto;padding:15px}} 
+</style> 
+<script type='text/javascript'> 
+//<![CDATA[ 
+// Say Hi to Adblock 
+function downloadJSAtOnload(){var e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/Arlina-Design/quasar@master/arlinablock.js",document.body.appendChild(e)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload; 
+//]]> 
+</script> 
+<!-- Codigo para blokear adblock fin -->
+</head>
+<body class="dark-mode">
+<div class="container-fluid">
+<div class="row main-row">
+<div class="sidebar">
+<h2 class="page-header logo-app">
+<img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv.png"></h2>
+<div class="nav-bar-container">
+<nav class="navbar bg-light left-navbar"  >
+<ul class="navbar-nav">
+<a class="btn  btn-subscription"><i class="fas fa-star"></i> Bienvenido</a>
+<li class="nav-item active"><a  class="nav-link" href="go:home"> <i class="fas fa-home"></i> Home</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/Peliculas.html"><i class="fas fa-film"></i>  Peliculas</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/Series.html"><i class="fa fa-desktop"></i> Series</a></li class="nav-item">
+<li class="nav-item"><a href="http://action_offices" target="_blank"><i class="fa fa-pencil fa-fw"></i> Solicitar Contenido</a></li class="nav-item">
+<li class="nav-item"><a href="#" target="_blank"><i class=""></i><span style="color: #F44336;"> -----------------------------------------</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="http://action_profile" target="_blank"><i class="fas fa-user"></i> Perfil</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="http://action_notifications" target="_blank"><i class="fa fa-bell"></i> Notificaciones</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="http://action_share" target="_blank"><i class="fas fa-share"></i> Compartir App</a></li class="nav-item">
+<li class="nav-item"><a href="#" target="_blank"><i class=""></i><span style="color: #F44336;"> -----------------------------------------</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/DMCA.html"><i class="fas fa-lock"></i> D M C A</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/Politica-de-privacidad.html"><i class="fas fa-lock"></i> Política de privacidad</a></li class="nav-item">
+<li class="nav-item"><a href="mailto: cineplaysoporte@gmail.com?Subject=Reportar%20un%20error%20" target="_blank"><i class="fa fa-user"></i> Soporte Técnico</a></li class="nav-item">
+</ul></nav></div></div>
+<div class="close-menu-left-btn"></div>
+<div class="main">
+<div class="xs-header" >
+<button class="btn btn-primary float-left menu-left-btn"><i class="fas fa-bars"></i></button>
+<img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv.png">
+<div class="btn-group  float-right">
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="for-desktop"> CineSeriesTv </span> 
+<img src="https://bier6695.github.io/PeliSer/Archivos/perfil.jpg"></button>
+<div class="dropdown-menu dropdown-login">
+<li class="nav-item"><a class="nav-link" href="http://action_profile" target="_blank"><i class="fas fa-user"></i> Perfil</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="mailto:cineplaysoporte@gmail.com?Subject=Solicitud%20de%20Contenido%20Cineseriestv" target="_blank"><i class="fad fa-envelope"></i> Contáctanos</a></li class="nav-item">
+<a class="dropdown-item" href="http://action_exit"><i class="fas fa-sign-out-alt"></i> Salir</a>
+</div></div>
+<button class="btn btn-primary float-right search-btn"><i class="fas fa-search"></i></button></div>
+<div class="row top-nav">
+<div class="col-sm-3 col-md-3 " >
+<div class="tab-title"><center>Estrenos</div>
+</div></center>
+<!---Inicio del Buscador Interno--->
+<div class="col-sm-6 col-md-6 search-form" >
+<input type="search" id="input-search" placeholder="Buscar aqui">
+<div class="content-search">
+<div class="content-table">
+<table id="table">
+<thead><tr><td></td></tr>
+</thead><tbody>
+  
+											<tr><td>
+<a href="/PeliSer/Peliculas/Río">Rio<p>Río</p>
+							</a></td></tr>																					
+											<tr><td>
+<a href="/PeliSer/Peliculas/Río 2">Río 2<p>Rio 2</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/Más Allá de la Fiesta">Más Allá de la Fiesta<p>Afterlife of the Party | La fiesta del más allá</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+												<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																					
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																									
+												<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																					
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																									
+							
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																					
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																										
+												<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																					
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																					
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																										
+												<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																					
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																					
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																										
+												<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																					
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/"><p>#</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/El jinete del dragón">El jinete del dragón<p>Dragon Rider</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/Scooby-Doo La Espada y Scooby">Scooby-Doo La Espada y Scooby<p>Straight Outta Nowhere Scooby-Doo! Meets Courage the Cowardly Dog</p>
+							</a></td></tr>																					
+											<tr><td>
+<a href="/PeliSer/Peliculas/Maligno">Maligno<p>Malignant</p>
+							</a></td></tr>																									
+											<tr><td>
+<a href="/PeliSer/Peliculas/Kate">Kate<p></p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/Escape Room 2 - Mueres por salir">Escape Room 2 Mueres por salir<p>Escape Room Tournament of Champions</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/Shang-Chi y la Leyenda de los Diez Anillos">Shang-Chi y la Leyenda de los Diez Anillos<p>Shang-Chi and the Legend of the Ten Rings</p>
+							</a></td></tr>																			  
+  
+ 											<tr><td>
+<a href="/PeliSer/Peliculas/After Almas Perdidas">After Almas Perdidas<p>After We Fell</p>
+							</a></td></tr>																			   
+  
+<tr><td><a href="/PeliSer/Peliculas/Agencia Secreta de Control Mágico.html">Agencia Secreta de Control Magico</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Despierta la Furia.html">Despierta la Furia</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El Conjuro 3 - El Diablo me Obligó a Hacerlo">El Conjuro 3 - El Diablo me Obligo a Hacerlo</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El ejército de los Muertos.html">El ejercito de los Muertos</a></td></tr>
+<!---Copia esto para la siguiente Busqueda--->
+<tr><td><a href="/PeliSer/Peliculas/Mortal Kombat.html">Mortal Kombat</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Monster Hunter.html">Monster Hunter</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/NOBODY - Nadie.html">NOBODY Nadie</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Rapido-y-Furioso.html">Rapido y Furioso</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Raya y el último dragón.html">Raya y el ultimo dragon</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Rogue Warfare.html">Rogue Warfare</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Trolls 2 - gira mundial.html">Trolls 2 gira mundial</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Tom y Jerry.html">Tom y Jerry</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Slaxx.html">Slaxx</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Un lugar en silencio.html">Un lugar en silencio</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Un lugar en silencio 2.html">Un lugar en silencio 2</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Un lugar en silencio.html">Un lugar tranquilo</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Un lugar en silencio 2.html">Un lugar tranquilo 2</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/La Guerra del Mañana">la guerra del mañana</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Viuda Negra.html">Viuda Negra</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Viuda Negra.html">black widow</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Mulan.html">mulan</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Riverdale.html">Riverdale</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Proyecto Géminis.html">Proyecto Géminis</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Chaos Walking">Chaos Walking</a></td></tr>
+<tr><td><a href="Barrenderos Espaciales">Barrenderos Espaciales</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El dragón de los deseos">El dragón de los deseos</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/A Todos Los Chicos Para Siempre.html">A Todos Los Chicos Para Siempre</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/After Aquí empieza todo.html">After Aquí empieza todo</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/After En mil pedazos.html">After En mil pedazos</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Cruella.html">Cruella</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Despues de ti.html">Despues de ti</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Dime cuando tu.html">Dime cuando tu</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Disomnia.html">Disomnia</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El Día del Sí.html">El Dia del Si</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El mapa de los instantes perfectos.html">El mapa de los instantes perfectos</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Fuerza Trueno.html">Fuerza Trueno</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Godzilla vs Kong.html">Godzilla vs Kong</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Guerra de Likes.html">Guerra de Likes</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Matar a Santa.html">Matar a Santa</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Nadie sabe que estoy aqui.html">Nadie sabe que estoy aqui</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Paternidad.html">Paternidad</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Straight Up.html">Straight Up</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/the dollmaker.html">the dollmaker</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Unpregnant.html">Unpregnant</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Luca">Luca</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Cómo me convertí en superhéroe">Como me converti en superheroe</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Tenet">Tenet</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Sin remordimientos">Sin remordimientos</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Space Jam 2 - Una nueva era">Space Jam 2 - Una nueva era</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Amor Sobre Ruedas">Amor Sobre Ruedas</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Cherry">Cherry</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El Bebé Jefazo 2 Negocios de familia">El Bebe Jefazo 2 Negocios de familia</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Ni un paso en falso">Ni un paso en falso</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/La Purga Infinita">La Purga Infinita</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/La calle del terror Parte 1 1994">La calle del terror Parte 1 1994</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/La calle del terror Parte 2 1978">La calle del terror Parte 2 1978</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/La calle del terror - Parte 3 1666">La calle del terror - Parte 3 1666</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Fragmentos de una mujer">Fragmentos de una mujer</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El despertar de los dragones (SPL2)">El despertar de los dragones (SPL2)</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Un don excepcional">Un don excepcional</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Igor Grom contra el Doctor Plague">Igor Grom contra el Doctor Plague</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Cielo rojo sangre">Cielo rojo sangre</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Snake Eyes G.I. Joe Origins">Snake Eyes G.I. Joe Origins</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El rey de Zamunda">El rey de Zamunda</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/La víctima perfecta">La victima perfecta</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Jolt">Jolt</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/En la misma ola">En la misma ola</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Venom">Venom</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Jungle Cruise">Jungle Cruise</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Vikingos">Vikingos</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Medianoche en el Switchgrass">Medianoche en el Switchgrass</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El último mercenario">El ultimo mercenario</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Songbird">Songbird</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Songbird">Inmune</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Ruega por nosotros">Ruega por nosotros</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/El Escuadrón Suicida">El Escuadrón Suicida 2021</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Frozen - El reino del hielo">Frozen - El reino del hielo</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Frozen Fever">Frozen Fever</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Frozen 2">Frozen 2</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Jurassic World">Jurassic World 2015</a></td></tr>
+<tr><td><a href="/PeliSer/Peliculas/Jurassic World - El reino caído">Jurassic World - El reino caído</a></td></tr>
+					<tr><td>
+<a href="/PeliSer/Peliculas/El Atrapa Sueños.html ">El Atrapa Sueños<p>Dreamcatcher (2021)</p>
+</a></td>	</tr>
+							
+					<tr><td>
+<a href="/PeliSer/Peliculas/Los Mitchell contra las máquinas">Los Mitchell contra las máquinas<p>The Mitchells vs. The Machines</p>
+</a></td></tr>
+
+					<tr><td>
+<a href="/PeliSer/Peliculas/Duro de Cuidar 2">Duro de Cuidar 2</p>El otro guardaespaldas 2 (2021)
+</a></td></tr>
+							
+					<tr><td>
+<a href="/PeliSer/Peliculas/Vivo">Vivo<p>2021</p>
+</a></td></tr>
+
+<tr><td>
+<a href="/PeliSer/Peliculas/Forrest Gump">Forrest Gump<p>1994</p>
+</a></td></tr>
+
+					<tr><td>
+<a href="/PeliSer/Peliculas/Pokémon Detective Pikachu">Pokemon Detective Pikachu<p>2019</p>
+</a>	</td></tr>
+
+					<tr><td>
+<a href="/PeliSer/Peliculas/Dragon Ball Super - Broly">Dragon Ball Super - Broly<p>Dragon Ball Super - Broly</p>
+</a></td></tr>
+
+										<tr><td>
+<a href="/PeliSer/Peliculas/Freaky">Freaky<p>Este cuerpo me sienta de muerte</p>
+							</a></td></tr>
+					
+										<tr><td>
+<a href="/PeliSer/Peliculas/Sonic">Sonic la película</p>Sonic the Hedgehog</a></td></tr>					
+										<tr><td>
+<a href="/PeliSer/Peliculas/Infinite.html">Infinite<p>Infinito</p>
+							</a></td></tr>
+							
+											<tr><td>
+<a href="/PeliSer/Peliculas/Tomando el control">Tomando el control<p>Free Guy</p>
+							</a></td></tr>						
+					
+										<tr><td>
+<a href="/PeliSer/Peliculas/El Stand de los Besos 3">El Stand de los Besos 3<p>The Kissing Booth 3</p>
+							</a></td></tr>
+							
+										<tr><td>
+<a href="/PeliSer/Peliculas/Kimetsu tren infinito">Kimetsu no Yaiba: Mugen Ressha-hen<p>Guardianes de la noche: Tren infinito</p>
+							</a></td></tr>							
+							
+										<tr><td>
+<a href="/PeliSer/Peliculas/Las voces">Las voces<p>The Voices</p>
+							</a></td></tr>
+							
+										<tr><td>
+<a href="/PeliSer/Peliculas/El día después de mañana">El día después de mañana<p>The Day After Tomorrow</p>
+							</a></td></tr>		
+							
+						
+										<tr><td>
+<a href="/PeliSer/Peliculas/Spare Parts">Spare Parts<p>A Mano Armada</p>
+							</a></td></tr>										
+										<tr><td>
+<a href="/PeliSer/Peliculas/BLACKPINK">BLACKPINK<p>Documental</p>
+							</a></td></tr>														
+										<tr><td>
+<a href="/PeliSer/Peliculas/No respires">No respires<p>Don't Breathe</p>
+							</a></td></tr>														
+										<tr><td>
+<a href="/PeliSer/Peliculas/No respires 2">No Respires 2<p>Don't Breathe 2</p>
+							</a></td></tr>														
+										<tr><td>
+<a href="/PeliSer/Peliculas/El Stand de los Besos">El Stand de los Besos 1<p>The Kissing Booth</p>
+							</a></td></tr>																	
+										<tr><td>
+<a href="/PeliSer/Peliculas/El Stand de los Besos 2">El Stand de los Besos 2<p>The Kissing Booth 2</p>
+							</a></td></tr>														
+										<tr><td>
+<a href="/PeliSer/Peliculas/Jumanji siguiente nivel">Jumanji siguiente nivel<p>Jumanji The Next Level</p>
+							</a></td></tr>														
+										<tr><td>
+<a href="/PeliSer/Peliculas/Feliz día de tu muerte">Feliz dia de tu muerte<p>Happy Death Day</p>
+							</a></td></tr>														
+																	<tr><td>
+<a href="/PeliSer/Peliculas/Feliz día de tu muerte 2">Feliz dia de tu muerte 2<p>Happy Death Day 2</p>
+							</a></td></tr>														
+							
+										<tr><td>
+<a href="/PeliSer/Peliculas/Huérfano">Huerfano<p>Ballet Blanc</p>
+							</a></td></tr>														
+										<tr><td>
+<a href="/PeliSer/Peliculas/Terapia del Miedo">Terapia del Miedo<p>Insensate</p>
+							</a></td></tr>														
+										<tr><td>
+<a href="/PeliSer/Peliculas/Annabelle">Annabelle<p>Annabelle 1</p>
+							</a></td></tr>														
+										<tr><td>
+<a href="/PeliSer/Peliculas/Annabelle 2 La Creación">Annabelle 2 La Creación<p>Annabelle Creation</p>
+							</a></td></tr>														
+										<tr><td>
+<a href="/PeliSer/Peliculas/Annabelle vuelve a casa">Annabelle 3 vuelve a casa<p>Annabelle Comes Home</p>
+							</a></td></tr>										
+								<tr><td>
+<a href="/PeliSer/Peliculas/Jumanji - Bienvenidos a la jungla">Jumanji Bienvenidos a la jungla<p>Jumanji Welcome to the Jungle</p>
+							</a></td></tr>			
+							
+<tr><td>
+<a href="/PeliSer/Peliculas/365 Días">365 Días<p>365 Days</p>
+							</a></td></tr>														
+							
+<tr><td>
+<a href="/PeliSer/Peliculas/Soñadores">Soñadores<p>Los Soñadores</p>
+							</a></td></tr>		
+							
+<tr><td>
+<a href="/PeliSer/Peliculas/Como la Espuma">Como la Espuma<p>Erotica</p>
+							</a></td></tr>														
+<tr><td>
+<a href="/PeliSer/Peliculas/Crazy Fist">Crazy Fist<p></p>
+							</a></td></tr>														
+										<tr><td>
+<a href="/PeliSer/Peliculas/Sweet Girl">Sweet Girl<p></p>
+							</a></td></tr>																
+											<tr><td>
+<a href="/PeliSer/Peliculas/Las Formas Antiguas">Las Formas Antiguas<p>The Old Ways</p>
+							</a></td></tr>																				
+										<tr><td>
+<a href="/PeliSer/Peliculas/Salvaje">Salvaje<p>Unhinged - Fuera de control</p>
+							</a></td></tr>																					
+										<tr><td>
+<a href="/PeliSer/Peliculas/Coco">Coco<p></p>
+							</a></td></tr>														
+										<tr><td>
+<a href="/PeliSer/Peliculas/Alguien como él">Alguien como él<p>El es así</p>
+							</a></td></tr>																					
+											<tr><td>
+<a href="/PeliSer/Peliculas/Amigos Pasajeros">Amigos Pasajeros<p>Vacation Friends</p>
+							</a></td></tr>																					
+							
+										<tr><td>
+<a href="/PeliSer/Peliculas/El Ascenso del Cisne Negro">SAS El Ascenso del Cisne Negro<p>SAS: Red Notice</p>
+							</a></td></tr>																					
+
+<tr><td>
+<a href="/PeliSer/Peliculas/Espiral El juego del miedo continúa">Espiral El juego del miedo continúa<p>Spiral Saw | Spiral From the Book of Saw</p>
+							</a></td></tr>
+							
+							<tr><td>
+<a href="/PeliSer/Peliculas/The Witcher La Pesadilla del Lobo">The Witcher La Pesadilla del Lobo<p>The Witcher Nightmare of the Wolf</p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Peliculas/Un romance de verdad">Un romance de verdad<p>Really Love</p>
+							</a></td></tr>																												
+											<tr><td>
+<a href="/PeliSer/Peliculas/Aves de Presa">Aves de Presa<p>Harley Quinn Birds of Prey</p>
+							</a></td></tr>																					
+	
+											<tr><td>
+<a href="/PeliSer/Peliculas/Soy Venganza Represalia">Soy Venganza Represalia<p>I Am Vengeance</p>
+							</a></td></tr>																					
+							
+										<tr><td>
+<a href="/PeliSer/Peliculas/Cenicienta">Cenicienta<p></p>
+							</a></td></tr>																												
+							
+	
+							
+
+<!---Copia esto para la siguiente Busqueda--->
+<tr><td><a href="/PeliSer/Serie/Invencible">Invencible</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/La casa de papel.html">La casa de papel</a></td></tr>
+<tr><td><a href="/PeliSer/SSerieLoki.html">Loki</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Lupín.html">Lupin</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Riverdale">Riverdale</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Superman y Lois.html">Superman y Lois</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/El niño ciervo.html">El niño ciervo</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/El niño ciervo.html">Sweet Tooth</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Falcon y el Soldado de Invierno.html">Falcon y el Soldado de Invierno</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Sexo vida">Sexo vida</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Skam España">Skam España</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/See">See</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/El infiltrado">El infiltrado</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Estación 19">Estacion 19</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/The Boys">The Boys</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Amos del Universo - Revelación">Amos del Universo - Revelación</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/WandaVision">WandaVision</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/WandaVision">Bruja Escarlata y Visión</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Sex Education">Sex Education</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Control Z">Control Z</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Rick y Morty">Rick y Morty</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Roswell - New Mexico">Roswell - New Mexico</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Con Olor a Fresas">Con Olor a Fresas</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Batwoman">Batwoman</a></td></tr>
+
+
+<tr><td>
+<a href="/PeliSer/Serie/A toda pastilla">A toda pastilla<p>Cómo vender drogas online</p>
+</a></td></tr>
+
+
+										<tr><td>
+<a href="/PeliSer/Serie/What If">What If<p>Qué pasaría si</p>
+							</a></td></tr>
+							
+							
+<tr><td><a href="/PeliSer/Serie/La Piloto">La Piloto</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/motherland for salem">motherland for salem</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/La Reina del Sur">La Reina del Sur</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Dragon Ball Super">Dragon Ball Super</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Soy Luna">Soy Luna</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Orphan black">Orphan black</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Selena">Selena</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Siren">Siren</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Es Mío">Es Mío</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Soldados o Zombies">S.O.Z: Soldados o Zombies</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Tierra trágame">Tierra trágame</a></td></tr>
+<tr><td><a href="/PeliSer/Serie/Recuerdos de Juventud">Recuerdos de Juventud</a></td></tr>
+
+										<tr><td>
+<a href="/PeliSer/Serie/Juego de Tronos">Juego de Tronos<p>Game of Thrones</p>
+							</a></td></tr>									
+
+										<tr><td>
+<a href="/PeliSer/Serie/Home Before Dark">Home Before Dark<p></p>
+							</a></td></tr>									
+
+										<tr><td>
+<a href="/PeliSer/Serie/The Flash">The Flash<p></p>
+							</a></td></tr>										
+										<tr><td>
+<a href="/PeliSer/Serie/Candice Renoir">Candice Renoir<p></p>
+							</a></td></tr>																
+										<tr><td>
+<a href="/PeliSer/Serie/El Club">El Club<p>The Club</p>
+							</a></td></tr>									
+							
+										<tr><td>
+<a href="/PeliSer/Novelas/Rosario Tijeras">Rosario Tijeras<p></p>
+							</a></td></tr>																
+										<tr><td>
+<a href="/PeliSer/Serie/El Barco">El Barco<p></p>
+							</a></td></tr>									
+							
+										<tr><td>
+<a href="/PeliSer/Serie/A todo tren destino Asturias">A todo tren destino Asturias<p></p>
+							</a></td></tr>																
+										<tr><td>
+<a href="/PeliSer/Serie/Mortal Kombat Legends Battle of The Realms">Mortal Kombat Legends: Batalla de los reinos<p>Mortal Kombat Legends: Battle of The Realms</p>
+							</a></td></tr>																
+										<tr><td>
+<a href="/PeliSer/Serie/The Walking Dead">The Walking Dead<p></p>
+							</a></td></tr>																
+							
+										<tr><td>
+<a href="/PeliSer/Serie/Hola Soy yo">Hola Soy yo<p></p>
+							</a></td></tr>																
+							
+										<tr><td>
+<a href="/PeliSer/Serie/Chicago PD">Chicago PD<p></p>
+							</a></td></tr>																
+							
+										<tr><td>
+<a href="/PeliSer/Serie/Wynonna Earp">Wynonna Earp<p></p>
+							</a></td></tr>																
+							
+										<tr><td>
+<a href="/PeliSer/Serie/Territorio Lovecraft">Territorio Lovecraft<p>Territorio Lovecraft</p>
+							</a></td></tr>																							
+							
+											<tr><td>
+<a href="/PeliSer/Serie/Outer Banks">Outer Banks<p></p>
+							</a></td></tr>																
+										<tr><td>
+<a href="/PeliSer/Serie/Pequeñas Mentirosas">Pequeñas Mentirosas<p>Pretty Little Liars</p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/The Good Doctor">The Good Doctor<p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/Magnum PI">Magnum PI<p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/Doctor Milagro">Doctor Milagro<p>Mucize Doktor</p>
+							</a></td></tr>																
+										<tr><td>
+<a href="/PeliSer/Serie/Lucifer">Lucifer<p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/Leyendas del Mañana">Leyendas del Mañana<p>Legends of Tomorrow</p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/Lunáticos">Lunáticos<p>Loonatics desatados</p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+											<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																						
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+											<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																						
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>			
+							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+											<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																						
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																							
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>																								
+										<tr><td>
+<a href="/PeliSer/Serie/"><p></p>
+							</a></td></tr>										
+
+
+
+
+										<tr><td>
+<a href="/PeliSer/Novelas/El Cartel de los Sapos - El Origen.html">El Cartel de los Sapos El Origen<p></p>
+							</a></td></tr>																					
+							
+<tr><td>
+<a href="/PeliSer/Doramas/El cielo te está esperando">El cielo te está esperando<p>Dorama</p>
+							</a></td></tr>	
+							
+<tr><td>
+<a href="/PeliSer/Doramas/Holo, mi amor">Holo mi amor<p>Dorama</p>
+							</a></td></tr>																	
+							
+<tr><td>
+<a href="/PeliSer/Doramas/My Runway">My Runway<p>Mi pasarela</p>
+							</a></td></tr>																	
+<tr><td>
+<a href="/PeliSer/Doramas/Mermelada de naranja">Mermelada de naranja<p>Orange Marmalade</p>
+							</a></td></tr>																	
+							
+							
+										<tr><td>
+<a href="/PeliSer/Novelas/Sin Senos no hay Paraíso">Sin Senos no hay Paraíso<p>Without Breasts There Is No Paradise</p>
+							</a></td></tr>																									
+										<tr><td>
+<a href="/PeliSer/Doramas/El Hada De Las Pesas">El Hada De Las Pesas<p>Dorama</p>
+							</a></td></tr>										
+										<tr><td>
+<a href="/PeliSer/Doramas/Pasadizo De Emergencia">Pasadizo De Emergencia<p>Hospital Playlist</p>
+							</a></td></tr>																					
+										<tr><td>
+<a href="/PeliSer/Novelas/Quién es Quién">Quien es Quien<p></p>
+							</a></td></tr>																												
+
+<!---Pega aqui el codigo del Buscador para una nueva Busqueda--->
+<!---No tocar esto--->
+</tbody></table></div></div>
+<!---fin del Buscador Interno--->
+<button class="btn btn-primary float-right for-phone search-btn-close"><i class="fas fa-times"></i></button></div>
+<div class="col-sm-3 col-md-3 account-action for-desktop">
+<div class="float-right">
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="for-desktop"> CineSeriesTv </span> 
+<img src="https://bier6695.github.io/PeliSer/Archivos/perfil.jpg"></button>
+<div class="dropdown-menu dropdown-login">
+<a class="dropdown-item" href="http://action_exit"><i class="fas fa-sign-out-alt"></i> Salir</a>
+</div></div></div></div>
+<!---Slider tipo Portada--->
+<div class="content">
+<div class="row content-section">
+<div class="col-sm-12 col-md-12" >
+<div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
+<ol class="carousel-indicators float-right">
+<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+<li data-target="#myCarousel" data-slide-to="1" ></li>
+<li data-target="#myCarousel" data-slide-to="2" ></li>
+<li data-target="#myCarousel" data-slide-to="3" ></li>
+<li data-target="#myCarousel" data-slide-to="4" ></li>
+<li data-target="#myCarousel" data-slide-to="5" ></li>
+<li data-target="#myCarousel" data-slide-to="6" ></li>
+<li data-target="#myCarousel" data-slide-to="7" ></li>
+<li data-target="#myCarousel" data-slide-to="8" ></li>
+</ol>
+<div class="carousel-inner w-100" role="listbox">
+<!---Inicio del Slider tipo Portada--->
+<div class="carousel-item active">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/original/o2wHyUwkIdbLFTdgoGb6kbECqtR.jpg">
+<a href="/PeliSer/Peliculas/Kate.html" class="carousel-detail">
+<div>
+<h3>Kate</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/original/849RDhbADVVnhtggR14dDBYejeN.jpg">
+<a href="/PeliSer/Peliculas/Cenicienta.html" class="carousel-detail">
+<div>
+<h3>Cenicienta</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/original/dsdbViTNjLu4DbgkkYmuY4xDQ20.jpg">
+<a href="/PeliSer/Peliculas/Escape Room 2 - Mueres por salir.html" class="carousel-detail">
+<div>
+<h3>Escape Room 2 - Mueres por salir</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/original/nDLylQOoIazGyYuWhk21Yww5FCb.jpg">
+<a href="/PeliSer/Peliculas/Shang-Chi y la Leyenda de los Diez Anillos.html" class="carousel-detail">
+<div>
+<h3>Shang-Chi y la Leyenda de los Diez Anillos</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/original/uO8fkyWgUZCKazswbwDyFUIuI7B.jpg">
+<a href="/PeliSer/Peliculas/Más Allá de la Fiesta.html" class="carousel-detail">
+<div>
+<h3>Más Allá de la Fiesta</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/w500_and_h282_face/ksmQ0w9LErvi4CmhyIIBkPnZUpx.jpg">
+<a href="/PeliSer/Peliculas/Mortal Kombat Legends Battle of The Realms.html" class="carousel-detail">
+<div>
+<h3>Mortal Kombat Legends: Batalla de los reinos</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/original/pDGdrFNpZjUe0SDdGHzMqCYlMmP.jpg">
+<a href="/PeliSer/Peliculas/Amigos Pasajeros.html" class="carousel-detail">
+<div>
+<h3>Amigos Pasajeros</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/original/rSqKcCgC3FvEqXZiY89OEe2vEov.jpg">
+<a href="/PeliSer/Serie/Soldados o Zombies.html" class="carousel-detail">
+<div>
+<h3>S.O.Z: Soldados o Zombies</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/w500_and_h282_face/j28p5VwI5ieZnNwfeuZ5Ve3mPsn.jpg">
+<a href="/PeliSer/Peliculas/Tomando el control.html" class="carousel-detail">
+<div>
+<h3>Tomando el control</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/w500_and_h282_face/4N6zEMfZ57zNEQcM8gWeERFupMv.jpg">
+<a href="/PeliSer/Serie/What If.html" class="carousel-detail">
+<div>
+<h3>Qué pasaría si</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/w500_and_h282_face/y0PkTKto4ruPREmQf5yspkHBpYk.jpg">
+<a href="/PeliSer/Peliculas/Duro de Cuidar 2.html" class="carousel-detail">
+<div>
+<h3>Duro de Cuidar 2</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://media2.giphy.com/media/M4eAoD9ItkozDiy3tm/giphy.webp?cid=6c09b9521f77a469d92dc971b45e12eec51bfed58005b623&rid=giphy.webp&ct=g">
+<a href="/PeliSer/Peliculas/El Escuadrón Suicida.html" class="carousel-detail">
+<div>
+<h3>El Escuadrón Suicida 2021</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://media.tenor.com/images/24254c511672cbcf1ff61f13b0c32e7d/tenor.gif">
+<a href="/PeliSer/Peliculas/Jungle Cruise.html" class="carousel-detail">
+<div>
+<h3>Jungle Cruise</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/w500_and_h282_face/h5pUsPt3SRwrHeyMEOarzFkcyIW.jpg">
+<a href="/PeliSer/Peliculas/Snake Eyes G.I. Joe Origins.html" class="carousel-detail">
+<div>
+<h3>Snake Eyes G.I. Joe Origins</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/w500_and_h282_face/eOLKWXXbcZJg91Jf1Fn7odUirl3.jpg">
+<a href="/PeliSer/Serie/Amos del Universo - Revelación.html" class="carousel-detail">
+<div>
+<h3>Amos del Universo - Revelación</h3>
+</div>
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/w500_and_h282_face/5eXNJ23P3dRkKsaBxstrgnVRPx7.jpg">
+<a href="/PeliSer/Peliculas/Cielo rojo sangre.html" class="carousel-detail">
+<div>
+<h3>Cielo rojo sangre</h3>
+</div>
+</a>
+</div>
+</div>
+
+
+<!---Copia esto para el siguiente Slider tipo Portada--->
+<div class="carousel-item">
+<div class="col-xxl-5 col-lg-8 col-md-12">
+<img height="400" width="640" class="img-fluid" src="https://www.themoviedb.org/t/p/w500_and_h282_face/keIxh0wPr2Ymj0Btjh4gW7JJ89e.jpg">
+<a href="/PeliSer/Peliculas/Tom y Jerry.html" class="carousel-detail">
+<div>
+<h3>Viuda Negra</h3>
+</div>
+</a>
+</div>
+</div>
+
+
+<!---No tocar esto--->
+</div>
+</div>
+</div>
+<!---fin de esta entrada--->
+
+<style type="text/css">
+@import url("https://bier6695.github.io/PeliSer/Formulario/Género.css");
+</style>
+
+<div class="ioaj cplzb"><ul>
+<li class="jhak"><a href="/PeliSer/Categorias/Peliculas.html">Películas</a></li>
+<li><a href="/PeliSer/Categorias/Series.html">Series</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Novelas.html">Telenovelas</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Doramas.html">Doramas</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Accion.html">Acción</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Terror y Suspenso.html">Terror y Suspenso</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Comedia.html">Comedia</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Ciencia Ficción.html">Ciencia Ficción</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Animacion.html">Animación</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Drama.html">Drama</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Romance.html">Romance</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Fantasia.html">Fantasía</a></li></ul></div>
+
+
+<!---Pega Aqui para crear una nueva categoria--->
+<!---Slider tipo Poster--->
+</div>
+</div>
+<div class="col-sm-12 col-md-12 ">
+<a href="/PeliSer/Categorias/Series.html" class="title-more">
+<span>Series</span>
+<i class="fa fa-th float-right">•Ver Más</i>
+</a>
+</div>
+<div class="flix-carousel" >
+<button  class="prev_btn"><i class="fa fa-chevron-left"></i></button>
+<button  class="next_btn"><i class="fa fa-chevron-right"></i></button>
+<div class="flix-scroll-x">
+<!---Inicio del Slider tipo Poster--->
+<a href="/PeliSer/Serie/Lucifer.html" title="Lucifer"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/wQh2ytX0f8IfC3b2mKpDGOpGTXS.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2016</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/The Good Doctor.html" title="The Good Doctor"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/53P8oHo9cfOsgb1cLxBi4pFY0ja.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2017</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Outer Banks.html" title="Outer Banks"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/1QAZ3nxN8K2d8GbCEwSlPwMA5pm.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Territorio Lovecraft.html" title="Territorio Lovecraft"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/fz7bdjxPColvEWCGr5Kiclzc86d.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Wynonna Earp.html" title="Wynonna Earp"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/wU83Erj8QDgrqvADSG0EyuEUz6t.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2016</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/The Walking Dead.html" title="The Walking Dead"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/wsq1xCuC9kDhFeoE7xuQFDC5iRC.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2010</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/The Flash.html" title="The Flash"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/2O8tlUzKS3uddGW5D2B9XM6b4e.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2014</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Home Before Dark.html" title="Home Before Dark"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/A4uh92nSommxHUkEKoeNH6I53dO.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Soldados o Zombies.html" title="Soldados o Zombies"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/lICAhPifWrXpscCvweCrUdCzCuG.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Juego de Tronos.html" title="Juego de Tronos"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/j24NiYZHsuLEdyYqUunlVCapC04.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2011</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/What If.html" title="What If"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w440_and_h660_face/92bJ5Ja4oEoun9zFvAOMVtaNfrA.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Selena.html" title="Selena"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/tQbnJXeuZwcQf1r9ul0ett4gDQs.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Amos del Universo - Revelación.html" title="Amos del Universo - Revelación"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/2atC8jd6uINWIQedu7Pk25OV6aF.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Falcon y el Soldado de Invierno.html" title="Falcon y el Soldado de Invierno"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/bthJ4RYhyvaf5kg4t8Fc8zKkMF0.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Lupín.html" title="Falcon y el Soldado de Invierno"  class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20Series/lupin%20poster.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<!---Copia esto para el siguiente Slider tipo Poster--->
+<a href="/PeliSer/Serie/Loki.html" alt="Loki" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Loki%20poster.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Sexo vida.html" alt="Sexo vida" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/7xKl8dPErKtu3wY41dWPnF2IhmC.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/El niño ciervo.html" alt="El niño ciervo" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/a7FioKNA7z0Dl1EMn14bxCyUUpp.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Vikingos.html" alt="Vikingos" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/upifmCWzYLezEXvMnrFjqZHysFs.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2013</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Superman y Lois.html" alt="Superman y Lois" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20Series/Superman%20y%20Lois%20poster.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Elite.html" alt="Elite" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/8fcYtdB6HLP7gsj46OKZ24PjC1g.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2018</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Invencible.html" alt="Invencible" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Batwoman.html" alt="Batwoman" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/jnaimWkIVSD9IInmZPyLYarSvvc.jpg" />
+<div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/La casa de papel.html" alt="La casa de papel" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/4LjPjtfaxEn2W61ORPeytr5Qq7j.jpg" />
+<div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2017</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Riverdale.html" alt="Riverdale" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/cEmpGjZZu3JSlkKm8NUuCzrUscR.jpg" />
+<div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2017</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/See.html" alt="See" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/e09B32foykCE2jmnJhOJcISiRnb.jpg" />
+<div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Estación 19.html" alt="Estación 19" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/apvr0s7sLvlPgNGtfuvM5EOJJMO.jpg" />
+<div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2018</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/The Boys.html" alt="The Boys" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/dzOxNbbz1liFzHU1IPvdgUR647b.jpg" />
+<div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/WandaVision.html" alt="WandaVision" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/iMWBNr2Vm0XeLMVpnj3PS53P4cd.jpg" />
+<div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Rick y Morty.html" alt="Rick y Morty" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/8kOWDBK6XlPUzckuHDo3wwVRFwt.jpg" />
+<div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2013</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Sex Education.html" alt="Sex Education" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/4Bph0hhnDH6dpc0SZIV522bLm4P.jpg" />
+<div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Skam España.html" alt="Skam España" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/ueXNsr8XSyUoJPwT3g5v7YAhZIJ.jpg" />
+<div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2018</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Control Z.html" alt="Control Z" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/8VNA0RdrPk8Ec7XVjpeT0Rnui79.jpg" />
+<div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Orphan black.html" alt="Orphan black" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/7hQKcjsYPnNGhxE7JGp2o4sTuPr.jpg" />
+<div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2017</span>
+</div>
+</div>
+</a>
+<!---Pega aqui el codigo del Slider tipo Poster--->
+<!---No tocar esto--->
+</div>
+</div>
+<div class="col-sm-12 col-md-12 ">
+<a href="/PeliSer/Categorias/Categoria-Doramas.html" class="title-more">
+<span>Doramas</span>
+<i class="fa fa-th float-right">•Ver Más</i>
+</a>
+</div>
+<div class="flix-carousel" >
+<button  class="prev_btn"><i class="fa fa-chevron-left"></i></button>
+<button  class="next_btn"><i class="fa fa-chevron-right"></i></button>
+<div class="flix-scroll-x">
+<!---Inicio del Slider tipo Poster--->
+<a href="/PeliSer/Doramas/Mermelada de naranja.html" title="Mermelada de naranja"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/4y59CKPFxdz51BN3K4SeeO5Ift0.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2015</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Doramas/My Runway.html" title="Mi pasarela"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/tCKwuuTZr5Yx8rTt1FWvQKDrXnw.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2016</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Doramas/Holo, mi amor.html" title="Holo, mi amor"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/umvrWjTyVgW9ulC4noFd2kuZJRM.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Doramas/Hola Soy yo.html" title="Hola Soy yo"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/8ZlKn5qEuv3wTzHyG4RSWJY81ec.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Doramas/Pasadizo De Emergencia.html" title="Pasadizo De Emergencia"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/8MSjQkH2FrG0t4l84L5HmiSFrS7.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Doramas/El Hada De Las Pesas.html" title="El Hada De Las Pesas"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/4CrTjZ5MYdF5dtSockIStCkiX5C.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2016</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Doramas/El cielo te está esperando.html" title="El cielo te está esperando"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w440_and_h660_face/n277gYwCQOBcTnACEwiyU7Xg1m2.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Tierra trágame.html" title="Tierra trágame"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/wiByXTq5vaDppWnYCLt6fzDuu7x.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Es Mío.html" title="Es Mío"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/69QIVItTwslQsZpqLuCNyhxk4cC.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/Recuerdos de Juventud.html" title="Recuerdos de Juventud"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/54yTLS5d4OPOuunzOvHlmP82eIT.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+
+<!---No tocar esto--->
+</div>
+</div>
+<div class="col-sm-12 col-md-12 ">
+<a href="/PeliSer/Categorias/Categoria-Novelas.html" class="title-more">
+<span>Telenovelas</span>
+<i class="fa fa-th float-right">•Ver Más</i>
+</a>
+</div>
+<div class="flix-carousel" >
+<button  class="prev_btn"><i class="fa fa-chevron-left"></i></button>
+<button  class="next_btn"><i class="fa fa-chevron-right"></i></button>
+<div class="flix-scroll-x">
+<!---Inicio del Slider tipo Poster--->
+<a href="/PeliSer/Novelas/Rosario Tijeras.html" title="Rosario Tijeras"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/q03eQL8AUx49lVH6IT3IlmWzhQu.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2016</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Novelas/Quién es Quién.html" title="Quién es Quién"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/xzMQqTTmjofphjTdeFaPm16G6gp.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2015</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Novelas/Sin Senos no hay Paraíso" title="Sin Senos no hay Paraíso"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/wG5uwLPMfHlYmXiVk9W88cV9llR.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2008</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Novelas/El Cartel de los Sapos - El Origen.html" title="El Cartel de los Sapos - El Origen"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/A17Rt6BLHno0puR1QXbsSKhBfA4.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/La Reina del Sur.html" title="La Reina del Sur"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/p11t8ckTC6EiuVw5FGFKdc2Z7GH.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2011</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Serie/La Piloto.html" title="La Piloto"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/upX2fGyD4tPjJJLIOuJlB3yp2OK.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2017</span>
+</div>
+</div>
+</a>
+<!---No tocar esto--->
+</div>
+</div>
+<div class="col-sm-12 col-md-12 ">
+<a href="/PeliSer/Categorias/Categoria-Accion.html" class="title-more">
+<span>Acción</span>
+<i class="fa fa-th float-right">•Ver Más</i>
+</a>
+</div>
+<div class="flix-carousel" >
+<button  class="prev_btn"><i class="fa fa-chevron-left"></i></button>
+<button  class="next_btn"><i class="fa fa-chevron-right"></i></button>
+<div class="flix-scroll-x">
+<!---Inicio del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Kate.html" title="Kate"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/uQWgSRXeYRWCvGIX9LDNBW6XBYD.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Soy Venganza Represalia.html" title="Soy Venganza Represalia"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/fshqvFBihzipvA5l9hwHQVuZCNG.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Shang-Chi y la Leyenda de los Diez Anillos.html" title="Shang-Chi y la Leyenda de los Diez Anillos"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/xtxEJRIU34IvzIhvs2dtUp3Uu8Y.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">CAM 2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El Ascenso del Cisne Negro.html" title="SAS: El Ascenso del Cisne Negro"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/4H70o8r9RN13qTBkuHJcKhRTLAl.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Sweet Girl.html" title="Sweet Girl"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/72KBb61fPaUDJWd2W8gG6xDhzzp.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Crazy Fist.html" title="Crazy Fist"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/z21p0pm82RbHrUyHj8Mu4tOEun5.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Infinite.html" title="Infinite"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w440_and_h660_face/niw2AKHz6XmwiRMLWaoyAOAti0G.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Duro de Cuidar 2.html" title="Duro de Cuidar 2"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/iCEOOnl2K6AqW9Hzh7SEjpaPm9o.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Snake Eyes G.I. Joe Origins.html" title="Snake Eyes G.I. Joe Origins"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/uIXF0sQGXOxQhbaEaKOi2VYlIL0.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Viuda Negra.html" title="Viuda negra"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/v1XE3dtqd9zsEET0EMkxBgXYP6T.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Igor Grom contra el Doctor Plague.html" title="Igor Grom contra el Doctor Plague"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/zI4yOVjcC51FNI1K3H5poIfm8Wn.jpg" /><div class="Image">
+<span style="top:.1:.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/La Guerra del Mañana.html" title="La Guerra del Mañana"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/tzp6VzED2TBc02bkYoYnQa6r2OK.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Godzilla vs Kong.html" title="Godzilla vs Kong"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/bnuC6hu7AB5dYW26A3o6NNLlIlE.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Rapido-y-Furioso.html" alt="Rapido-y-Furioso" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/r%C3%A1pido%20y%20furioso%202021%20post.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Medianoche en el Switchgrass.html" alt="Medianoche en el Switchgrass" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/1OTSuh2HNcTRfme8caU8DjgJ39K.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<!---Copia esto para el siguiente Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Tenet.html" alt="Tennet" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/67p7XVP5SLup521iD9cAayMNt2U.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<!---Copia esto para el siguiente Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/El ejército de los Muertos.html" alt="El ejército de los Muertos" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/El%20ej%C3%A9rcito%20de%20los%20Muertos%20post.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Monster Hunter.html" alt="Monster Hunter" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Monster%20Hunter.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/NOBODY - Nadie.html" alt="NOBODY - Nadie" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Nadie%20post.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Despierta la Furia.html" alt="Despierta la Furia" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/despierta%20la%20furia%20post.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Sin remordimientos.html" title="Sin remordimientos"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/rEm96ib0sPiZBADNKBHKBv5bve9.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<!---Pega aqui el codigo del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Chaos Walking.html" alt="Chaos Walking" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/a0R1Ybj3m4M4ZeztizD7F6fmPCE.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<!---No tocar esto--->
+</div>
+</div>
+<div class="col-sm-12 col-md-12 ">
+<a href="/PeliSer/Categorias/Categoria-Terror y Suspenso.html" class="title-more">
+<span>Terror<spann>
+<i class="fa fa-th float-right">•Ver Más</i>
+</a>
+</div>
+<div class="flix-carousel" >
+<button  class="prev_btn"><i class="fa fa-chevron-left"></i></button>
+<button  class="next_btn"><i class="fa fa-chevron-right"></i></button>
+<div class="flix-scroll-x">
+<!---Inicio del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Maligno" title="Maligno"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/9eo0feDgFvAV4rDrQw6TyNAjSes.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Escape Room 2 - Mueres por salir" title="Escape Room 2 - Mueres por salir"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/hBD44n4mmcckzM7rDgB3CGi12f7.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Espiral El juego del miedo continúa" title="Espiral El juego del miedo continúa"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/qIlRt4op22B69QUbLlfif2lFHVs.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Las Formas Antiguas" title="Las Formas Antiguas"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/sZqaqEFeuzlgp31y3B4K6ysIl0S.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Annabelle vuelve a casa" title="Annabelle vuelve a casa"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/zxwPksbRKGaAi06rapPfFTVsMHv.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Terapia del Miedo" title="Terapia del Miedo"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/oYlAnaH1dClevLyKl5hkNqZeKib.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/No respires 2" title="No respires 2"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/nR8kDV11jeRWdcjMwavbqFrJolR.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/No respires" title="No respires"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/3A5sAyP9iENTRL5X86FUeYmo0wZ.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2016</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Spare Parts" title="Spare Parts"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/ih3ZHVQMV59fSOxLYpSQuCKC3I2.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Cielo rojo sangre" title="Cielo rojo sangre"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/ky8Fua6PD7FyyOA7JACh3GDETli.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El Atrapa Sueños" title="El Atrapa Sueños"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/qUyFrgb3jf3f991vm60LOYDkFGM.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/La calle del terror - Parte 3 1666" title="La calle del terror - Parte 3 1666"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/ouTHprNeiOYDS5zw5x7wrBF79q7.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/La calle del terror Parte 2 1978.html" title="La calle del terror Parte 2 1978"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/dEwIduMFhLKEcx9hxCuv7zX9LN2.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/La calle del terror Parte 1 1994.html" title="La calle del terror Parte 1 1994"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/xGf1snRLGQpiUkWvJSGwiSXW9sR.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/La Purga Infinita.html" title="La Purga Infinita"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/r2t07ky5WFRiI0bXLRIQCjalNkj.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Sin remordimientos.html" title="Sin remordimientos"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/rEm96ib0sPiZBADNKBHKBv5bve9.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Ruega por nosotros.html" title="Ruega por nosotros"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/hPoOn553ARmSQl0ChKTlGDvYq9x.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El Conjuro 3 - El Diablo me Obligó a Hacerlo.html" title="El Conjuro 3 - El Diablo me Obligó a Hacerlo"  class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/El%20Conjuro%203%20post.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Slaxx.html" alt="Slaxx" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Slaxx%20poster.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<!---Copia esto para el siguiente Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/the dollmaker.html" alt="the dollmaker" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/dJehoFl9G3Mv2Yp0LooRMB15fVI.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2017</span>
+</div>
+</div>
+</a>
+<!---Copia esto para el siguiente Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Un lugar en silencio 2.html" alt="Un lugar en silencio 2" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/iNOCVFyrsykGqT48JNotgFF9XCf.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<!---Pega aqui el codigo del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Un lugar en silencio.html" alt="Un lugar en silencio" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/5pairI20KJs1SEa4Z8yAsPR779m.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2018</span>
+</div>
+</div>
+</a>
+<!---Pega aqui el codigo del Slider tipo Poster--->
+<!---No tocar esto--->
+</div>
+</div>
+<div class="col-sm-12 col-md-12 ">
+<a href="/PeliSer/Categorias/Categoria-Comedia.html" class="title-more">
+<span>Comedia</span>
+<i class="fa fa-th float-right">•Ver Más</i>
+</a>
+</div>
+<div class="flix-carousel" >
+<button  class="prev_btn"><i class="fa fa-chevron-left"></i></button>
+<button  class="next_btn"><i class="fa fa-chevron-right"></i></button>
+<div class="flix-scroll-x">
+<!---Inicio del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Amigos Pasajeros.html" title="Amigos Pasajeros"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/5gQmECcdlJeYlBHTh0TIz3DE75Y.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Alguien como él.html" title="Alguien como él"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/lge7oQ4AyhINB8lrTWwg1z9bEPF.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Tomando el control.html" title="Tomando el control"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w440_and_h660_face/yc2IfL701hGkNHRgzmF4C6VKO14.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El último mercenario.html" title="El último mercenario"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/lErxWgAtIOdxclev06lDqosYx8F.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Jolt.html" title="Jolt"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/gYZAHan5CHPFXORpQMvOjCTug4E.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Space Jam 2 - Una nueva era.html" title="Space Jam 2 - Una nueva era"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/uHDF2320SbWDTP1FMZ8LgEIHew2.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El rey de Zamunda.html" title="El rey de Zamunda"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/jJFvY25lPaKlapYOeIH6N5aKcbh.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Guerra de Likes.html" title="Guerra de Likes"  class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Guerra%20de%20Likes%20poster.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Paternidad.html" title="Paternidad"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6dtOXsz51eMkE40SfmcvKKna1Tk.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Cruella.html" title="Cruella"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/qb28nkLZV0v6yJZZRpJYl0LE35N.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Agencia Secreta de Control Mágico.html" alt="Agencia Secreta de Control Mágico" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Agencia%20Secreta%20de%20Control%20M%C3%A1gico%20poster.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El Día del Sí.html" alt="El Día del Sí" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/wFP7GnJX9sed6tvuB8tekOQxvzQ.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Un don excepcional.html" alt="Un don excepcional" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/bskZzXMb1JSO1I9j8vUj3LFXw2w.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2017</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Dancing Queens.html" alt="Dancing Queens" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20Series/Dancing%20Queens%20poster.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Slaxx.html" alt="Slaxx" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Slaxx%20poster.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<!---Copia esto para el siguiente Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Fuerza Trueno.html" alt="Fuerza Trueno" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Fuerza%20Trueno%20poster.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Straight Up.html" alt="Straight Up" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Straight%20Up%20poster.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<!---Pega aqui el codigo del Slider tipo Poster--->
+<!---No tocar esto--->
+</div>
+</div>
+<div class="col-sm-12 col-md-12 ">
+<a href="/PeliSer/Categorias/Categoria-Ciencia Ficción.html" class="title-more">
+<span>Ciencia Ficción</span>
+<i class="fa fa-th float-right">•Ver Más</i>
+</a>
+</div>
+<div class="flix-carousel" >
+<button  class="prev_btn"><i class="fa fa-chevron-left"></i></button>
+<button  class="next_btn"><i class="fa fa-chevron-right"></i></button>
+<div class="flix-scroll-x">
+<!---Inicio del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/El Escuadrón Suicida.html" alt="El Escuadrón Suicida" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/pSaFLyMfXka4SO1tfqNa140aDKx.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Un lugar en silencio 2.html" alt="Un lugar en silencio 2" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/iNOCVFyrsykGqT48JNotgFF9XCf.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<!---Pega aqui el codigo del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Godzilla vs Kong.html" title="Godzilla vs Kong"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/bnuC6hu7AB5dYW26A3o6NNLlIlE.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/La Guerra del Mañana.html" title="La Guerra del Mañana"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/tzp6VzED2TBc02bkYoYnQa6r2OK.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Rapido-y-Furioso.html" alt="Rapido-y-Furioso" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/r%C3%A1pido%20y%20furioso%202021%20post.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Monster Hunter.html" alt="Monster Hunter" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Monster%20Hunter.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<!---Copia esto para el siguiente Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Mortal Kombat" alt="Mortal Kombat" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/mortal%20Kombat%20post.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Tenet.html" alt="Tennet" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/67p7XVP5SLup521iD9cAayMNt2U.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El ejército de los Muertos.html" alt="El ejército de los Muertos" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/El%20ej%C3%A9rcito%20de%20los%20Muertos%20post.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Disomnia.html" alt="Disomnia" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r8kmQ1lBmeC5oLztNKQUBB6xh8i.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Chaos Walking.html" alt="Chaos Walking" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/a0R1Ybj3m4M4ZeztizD7F6fmPCE.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Venom.html" alt="Venom" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/bURIWlkMbzT8RdpemzCmQECo2Uh.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2018</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Jurassic World.html" alt="Jurassic World" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/tLY0crgPAwIBiwkF7lDLmEjBWyn.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2015</span>
+</div>
+</div>
+</a>
+<!---Pega aqui el codigo del Slider tipo Poster--->
+<!---No tocar esto--->
+</div>
+</div>
+<div class="col-sm-12 col-md-12 ">
+<a href="/PeliSer/Categorias/Categoria-Animacion.html" class="title-more">
+<span>Animación</span>
+<i class="fa fa-th float-right">•Ver Más</i>
+</a>
+</div>
+<div class="flix-carousel" >
+<button  class="prev_btn"><i class="fa fa-chevron-left"></i></button>
+<button  class="next_btn"><i class="fa fa-chevron-right"></i></button>
+<div class="flix-scroll-x">
+<!---Inicio del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Scooby-Doo La Espada y Scooby.html" title="Scooby-Doo La Espada y Scooby"  class="poster " >
+<div>
+  <img width="200" height="300" src="https://www.themoviedb.org/t/p/original/jOMK2YFKtzXGTm0tedsurDj5pFh.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Río 2.html" title="Río 2"  class="poster " >
+<div>
+  <img width="200" height="300" src="https://www.themoviedb.org/t/p/original/xx1k3kCfIs95eAMa1pglXv74cRp.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2014</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Mortal Kombat Legends Battle of The Realms.html" title="Mortal Kombat Legends Battle of The Realms"  class="poster " >
+<div>
+  <img width="200" height="300" src="https://www.themoviedb.org/t/p/original/ikSqxoxcIMq6tG3cCpO0KFt5PQ5.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/The Witcher La Pesadilla del Lobo.html" title="The Witcher La Pesadilla del Lobo"  class="poster " >
+<div>
+  <img width="200" height="300" src="https://www.themoviedb.org/t/p/original/9X9MwQVXqlnucUfHGD97AApf726.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Coco.html" title="Coco"  class="poster " >
+<div>
+  <img width="200" height="300" src="https://www.themoviedb.org/t/p/original/yK4zbNqLhXDy9RnJnfbGq3z6Flf.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2017</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Los Mitchell contra las máquinas.html" title="Los Mitchell contra las máquinas"  class="poster " >
+<div>
+  <img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/w1eq7A9NArBbwZP9YYVJEZ2pvY.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El Bebé Jefazo 2 Negocios de familia.html" title="El Bebé Jefazo 2 Negocios de familia"  class="poster " >
+<div>
+  <img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/85J1DwZowIlKFOF7jllgCD3iHhx.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Luca.html" title="Luca"  class="poster " >
+<div>
+  <img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/pr06RihHOGE3waZQx5fs2WYUdwr.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Tom y Jerry.html" alt="Tom y Jerry" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Tom%20y%20Jerry%20post.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Frozen 2.html" alt="Frozen 2" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/jnFCk7qGGWop2DgfnJXeKLZFuBq.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Frozen - El reino del hielo.html" alt="Frozen - El reino del hielo" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/sGNuWC4BwqOB4l0tkbKwLy70tXC.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2013</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Space Jam 2 - Una nueva era.html" title="Space Jam 2 - Una nueva era"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/uHDF2320SbWDTP1FMZ8LgEIHew2.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Kimetsu tren infinito.html" alt="Kimetsu tren infinito" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3f4ETSwknZs74lmUYC7ENIMRBMP.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El dragón de los deseos.html" alt="El dragón de los deseos dragón" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/uBSOVabHjh9vbfnA6B2u1C7vIq1.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Raya y el último dragón.html" alt="Raya y el último dragón" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/lEC7RHYJ7zidupb9TGJdjwiK4L4.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Trolls 2 - gira mundial.html" alt="Trolls 2 - gira mundial" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/trolls%202%20post.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<!---Copia esto para el siguiente Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Más allá de la Luna.html" alt="Más allá de la Luna" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/M%C3%A1s%20all%C3%A1%20de%20la%20Luna.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Agencia Secreta de Control Mágico.html" alt="Agencia Secreta de Control Mágico" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Agencia%20Secreta%20de%20Control%20M%C3%A1gico%20poster.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Dragon Ball Super - Broly.html" alt="Dragon Ball Super - Broly" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/6JilEC1SON8tWIRHcdJzf4uVBpX.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2018</span>
+</div>
+</div>
+</a>
+<!---Pega aqui el codigo del Slider tipo Poster--->
+<!---No tocar esto--->
+</div>
+</div>
+<div class="col-sm-12 col-md-12 ">
+<a href="/PeliSer/Categorias/Categoria-Drama.html" class="title-more">
+<span>Drama</span>
+<i class="fa fa-th float-right">•Ver Más</i>
+</a>
+</div>
+<div class="flix-carousel" >
+<button  class="prev_btn"><i class="fa fa-chevron-left"></i></button>
+<button  class="next_btn"><i class="fa fa-chevron-right"></i></button>
+<div class="flix-scroll-x">
+<!---Inicio del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Ni un paso en falso.html" title="Ni un paso en falso"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/34BmdJkdvRweC3xJJFlOFQ2IbYc.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Paternidad.html" title="Paternidad"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6dtOXsz51eMkE40SfmcvKKna1Tk.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Cherry.html" title="Cherry"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/uOLhNUmNtbatfBgvyIstalPJYyv.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Despues de ti.html" title="Después de ti"  class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20Series/Despu%C3%A9s%20de%20ti%20poster.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Un lugar en silencio.html" alt="Un lugar en silencio 2" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/iNOCVFyrsykGqT48JNotgFF9XCf.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<!---Pega aqui el codigo del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Nadie sabe que estoy aqui.html" alt="Nadie sabe que estoy aqui" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/c7CTxNNPeg6MH9VA9BBvMKdPmSh.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Fragmentos de una mujer.html" alt="Fragmentos de una mujer" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/OgUfLlhfBFx5BPK6LzBWFvBW1w.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Disomnia.html" alt="Disomnia" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r8kmQ1lBmeC5oLztNKQUBB6xh8i.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<!---Copia esto para el siguiente Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Dancing Queens.html" alt="Dancing Queens" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20Series/Dancing%20Queens%20poster.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Unpregnant.html" alt="Unpregnant" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/3wZPuZIYjfO2eEHgOKUdJ8QjC6E.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<!---Pega aqui el codigo del Slider tipo Poster--->
+<!---No tocar esto--->
+</div>
+</div>
+<!---Pega Aqui para crear una nueva categoria--->
+<!---Slider tipo Poster--->
+<div class="col-sm-12 col-md-12 ">
+<a href="/PeliSer/Categorias/Categoria-Romance.html" class="title-more">
+<span>Romance</span>
+<i class="fa fa-th float-right">•Ver Más</i>
+</a>
+</div>
+<div class="flix-carousel" >
+<button  class="prev_btn"><i class="fa fa-chevron-left"></i></button>
+<button  class="next_btn"><i class="fa fa-chevron-right"></i></button>
+<div class="flix-scroll-x">
+<!---Inicio del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/After Almas Perdidas.html" alt="After Almas Perdidas" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/ei0T8rZf9mKqFtP3rTQXXiyQCVn.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">CAM 2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Un romance de verdad.html" alt="Un romance de verdad" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/chv0cEGaUAcuwhpdAzPCIhikSjQ.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Como la Espuma.html" alt="Como la Espuma" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/iK4YJM8wTvUmokEICLxmx3mCguu.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">Erótica 2017</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Soñadores.html" alt="Soñadores" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/8qfobYl8Rky4LPv1CCVEJ3T5u4o.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">Erótica 2003</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/365 Días.html" alt="365 Días" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/jz8T3hrU6GuMqSuQ4Rbd4MJUeaq.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">Erótica 2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El Stand de los Besos 3.html" alt="El Stand de los Besos 3" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w440_and_h660_face/jdD6Rd8XMXPFZmCXLKWPthd1HsV.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Songbird.html" alt="Songbird" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/9pKj3Awn5SThyHRkpprwHpRbe9Q.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/En la misma ola.html" alt="En la misma ola" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/mllO4lFsUVSUyTS3HiiidXDPkpB.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Straight Up.html" alt="Straight Up" class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Straight%20Up%20poster.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Dime cuando tu.html" title="Dime cuando tu"  class="poster " >
+<div>
+<img width="200" height="300" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20Series/Dime%20cu%C3%A1ndo%20poster.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/After En mil pedazos.html" title="After En mil pedazos"  class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/8nPw22C41EUWXREWmY9iIivMXxm.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<!---Copia esto para el siguiente Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/El mapa de los instantes perfectos.html" alt="El mapa de los instantes perfectos" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/6y3ev0rJFbHA1hU22UPmmfzBjrG.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/A Todos Los Chicos Para Siempre.html" alt="A Todos Los Chicos Para Siempre" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/7bGVC0tkhvihjZHNFJuiuY2YcN7.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/After Aquí empieza todo.html" alt="After: Aquí empieza todo" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/5kZxlS9vLExy3hZA5GfNFg8oJgZ.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<!---Pega aqui el codigo del Slider tipo Poster--->
+<!---No tocar esto--->
+</div>
+</div>
+<!---fin de esta entrada--->
+<!---Pega Aqui para crear una nueva categoria--->
+<!---Pega Aqui para crear una nueva categoria--->
+<!---Slider tipo Poster--->
+<div class="col-sm-12 col-md-12 ">
+<a href="/PeliSer/Categorias/Categoria-Fantasia.html" class="title-more">
+<span>Fantasía</span>
+<i class="fa fa-th float-right">•Ver Más</i>
+</a>
+</div>
+<div class="flix-carousel" >
+<button  class="prev_btn"><i class="fa fa-chevron-left"></i></button>
+<button  class="next_btn"><i class="fa fa-chevron-right"></i></button>
+<div class="flix-scroll-x">
+<!---Inicio del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Cenicienta.html" alt="Cenicienta" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/hQfsnnMsT974eLkB345zzDZfB8i.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Más Allá de la Fiesta.html" alt="Más Allá de la Fiesta" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/9qxQMR5aQXSXkGvgyKnI4otEC3v.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Jumanji siguiente nivel.html" alt="Jumanji siguiente nivel" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/original/a8R5yw0vShsgHSjeikVcPdkaWAW.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Jungle Cruise.html" alt="Jungle Cruise" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/r3TCF5qkGG2IH1pj8OjPNqmVm14.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Mulan.html" alt="Mulan" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/72XYwdIugXnjHxS6upI6U0yeTBU.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<!---Copia esto para el siguiente Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Barrenderos Espaciales.html" alt="Barrenderos Espaciales" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w220_and_h330_face/eQyi0oEk0WtkiWJxPi58M53Crzv.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<!---Copia esto para el siguiente Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/Cómo me convertí en superhéroe.html" alt="Cómo me convertí en superhéroe" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/1tcQdrmvVooaZs6niLIX1DnaZxB.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<!---Pega aqui el codigo del Slider tipo Poster--->
+<a href="/PeliSer/Peliculas/El dragón de los deseos.html" alt="El dragón de los deseos dragón" class="poster " >
+<div>
+<img width="200" height="300" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/uBSOVabHjh9vbfnA6B2u1C7vIq1.jpg" />
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<!---No tocar esto--->
+</div>
+</div>
+<!---fin de esta entrada--->
+<!---Pega Aqui para crear una nueva categoria--->
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://bier6695.github.io/documentos/src/jquery.min.js"></script>
+<script src="https://bier6695.github.io/documentos/src/popper.min.js"></script>
+<script src="https://bier6695.github.io/documentos/src/bootstrap.min.js"></script>
+<script src="https://bier6695.github.io/documentos/src/app.js"></script>
+<script src="https://bier6695.github.io/documentos/src/buscador.js"></script>
+<script src="https://bier6695.github.io/documentos/src/swiper-bundle.min.js"></script>
+<script src="https://bier6695.github.io/documentos/src/search.js"></script>
+</body>
+</html>
