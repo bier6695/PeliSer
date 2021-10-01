@@ -8,13 +8,20 @@
 <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv.png" />	
 <title>CineSeriesTv</title><!-- Bootstrap -->
 <link rel="stylesheet" href="https://bier6695.github.io/documentos/src/bootstrap.min.css">
-<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/style.css">
-<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/fontawesome-pro.css">
-<script src="https://bier6695.github.io/documentos/src/jquery-1.11.3.min.js"></script>
-<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/estilosearch.css">
-<script src="https://bier6695.github.io/documentos/src/jquery.js"></script>
-<script src="https://bier6695.github.io/documentos/src/jquery.dataTables.min.js"></script>
-<script src="https://bier6695.github.io/documentos/src/font-awesome.jsy"></script>
+<link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/nsfp12214u1wvja/moficado%20poster.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/7p5huopj22330u5/buscador%20de%20categor%C3%ADa.css">
+<script src="https://www.dl.dropboxusercontent.com/s/4gky3sbyedu8tqv/jquery-3.1.0.js"></script>
+<script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/i03lwlt39gggruj/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script src="https://www.dl.dropboxusercontent.com/s/5u03wtyxvalchsy/de%20categor%C3%ADa.js"></script>
+<link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/ujhxy0imosbsx5t/del%20buscador.css">
+<style>
+
+
+</style>
+
+
 </head>
 <body class="dark-mode">
 <div class="container-fluid">
@@ -27,8 +34,8 @@
 <ul class="navbar-nav">
 <a class="btn  btn-subscription"><i class=""></i> Bienvenido</a>
 <li class="nav-item active"><a  class="nav-link" href="go:home"> <i class=""></i>🏠 Home</a></li class="nav-item">
-<li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/Peliculas.html"><i class=""></i>🎬 Peliculas</a></li class="nav-item">
-<li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/Series.html"><i class=""></i>📺 Series</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="go:Peliculas"><i class=""></i>🎬 Peliculas</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="go:Series"><i class=""></i>📺 Series</a></li class="nav-item">
 <li class="nav-item"><a href="http://action_offices" target="_blank"><i class=""></i>🛎️ Solicitar Contenido</a></li class="nav-item">
 <li class="nav-item"><a href="#" target="_blank"><i class=""></i><span style="color: #F44336;"> -----------------------------------------</a></li class="nav-item">
 <li class="nav-item"><a class="nav-link" href="http://action_profile" target="_blank"><i class=""></i>👥 Perfil</a></li class="nav-item">
@@ -42,7 +49,7 @@
 <div class="close-menu-left-btn"></div>
 <div class="main">
 <div class="xs-header" >
-<button class="btn btn-primary float-left menu-left-btn"><i class="fas fa-bars"></i></button>
+<button class="btn btn-primary float-left menu-left-btn">≡≡</i></button>
 <img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv.png">
 <div class="btn-group  float-right">
 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="for-desktop"> CineSeriesTv </span> 
@@ -64,28 +71,6 @@
 <!---Fin de las Categorías--->
 
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<style type="text/css">
-*{margin: 0;padding: 0;box-sizing: border-box;user-select:none;outline:none;user-select:none;font-family: 'Raleway';}
-body{background-color:#000;}
-#search-par{display:flex;justify-content:center;color:#eee;width:100%;margin-top:30px;}
-#search-par input{height:30pxmin-width:0px;padding-left:1px;border:none;font-size:14px;color:white;background-color:#282C35;border-top:1px solid  #282C35;border-bottom:1px solid #282C35;}
-#search-par #search1{padding:12px;background: #282C35;border-radius:5px 0px 0px 5px;border-top:1px solid #282C35;border-bottom:1px solid #282C35;border-left:1px solid #282C35;}
-#search-par #icons2{padding:12px;background: #282C35;border-radius:0px 5px 5px 0px;border-top:1px solid #282C35;border-bottom:1px solid #282C35;border-right:1px solid #282C35;}
-
-header{width: 100%;height: 60px;background: #e05656;padding: 10px;}
-.content-search{width: 100%;height: 100vh;position: fixed;top: 60px;left: 0;background: rgba(0,0,0,0.3);display: none;}
-.content-table{width: 95%;max-height: 200px;height: auto;background: white;margin-left: 10px;overflow-y: visible;overflow-x: hidden;}
-.content-table table{width: 100%;}
-tbody tr td a{display: block;padding: 10px;color: black;text-decoration: none;}
-tbody tr td a:hover{background: transparent;}
-#table_length, #table_filter, #table_info, #table_paginate{display: none;}
-</style>
-<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-<script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
-<head>
-
-
 </div>  
   
 <div id="search-par">
@@ -103,142 +88,7 @@ tbody tr td a:hover{background: transparent;}
 <i class="material-icons" id="icons2">mic</i>
 </div>
 
-
-
-
-<link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/i03lwlt39gggruj/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<script src="https://photocall.tv/js/jquery.min.js"></script>
-<script type="text/javascript">
-function RemoveAccents(str) {
-  var accents    = 'ÀÁÂÃÄÅĄĀāàáâãäåąßÒÓÔÕÕÖØŐòóôőõöøĎďDŽdžÈÉÊËĘèéêëęðÇçČčĆćÐÌÍÎÏĪìíîïīÙÚÛÜŰùűúûüĽĹŁľĺłÑŇŃňñńŔŕŠŚŞšśşŤťŸÝÿýŽŻŹžżźđĢĞģğ';
-  var accentsOut = 'AAAAAAAAaaaaaaaasOOOOOOOOoooooooDdDZdzEEEEEeeeeeeCcCcCcDIIIIIiiiiiUUUUUuuuuuLLLlllNNNnnnRrSSSsssTtYYyyZZZzzzdGGgg';
-  str = str.split('');
-  var strLen = str.length;
-  var i, x;
-  for (i = 0; i < strLen; i++) {
-    if ((x = accents.indexOf(str[i])) != -1) {
-      str[i] = accentsOut[x];
-    }
-  }
-  return str.join('');
-}
-
-$(document).ready(function() {
-    $('#myInput').on('input', function() {
-        var value = $(this).val().toLowerCase();
-        $('.canales > .dropdown').filter(function() {
-            $(this).toggle($(this).find('a').attr('title').toLowerCase().indexOf(value) > -1)
-        });
-    });
-});
-</script>
-<style type="text/css">
-body {
-	font: 20px 'Open Sans', sans-serif;
-	font-weight: bold;
-	background: #000015;
-	user-select: none;
-}
-
-a:link {
-	text-decoration: none;
-	color: #bbb;
-}
-
-a:visited {
-	text-decoration: none;
-	color: #bbb;
-}
-
-a:hover {
-	text-decoration: none;
-	color: #444;
-}
-
-section {
-	display: none;
-	padding: 10px;
-}
-
-input.tab {
-	display: none;
-}
-
-label {
-	display: inline-block;
-	padding: 8px;
-	font-weight: 500;
-	color: white;
-}
-
-label:hover {
-	color: #3EB495;
-	cursor: pointer;
-}
-
-input:checked+label {
-	color: #3EB495;
-/*	border-bottom: 3px solid red;*/
-}
-
-#tab1:checked~#content1,
-#tab2:checked~#content2,
-#tab3:checked~#content3,
-#tab4:checked~#content4 {
-	display: block;
-}
-
-.canales {
-	text-align: center;
-}
-
-.canales .card {
-	display: inline-block;
-	background: transparent;
-	width: 108px;
-	height: 160px;
-	margin: 3px;
-	border-radius: 5%;
-	position: relative;
-	box-shadow: 0 2px 2px 0 rgba(51, 51, 51, 0.14), 0 3px 1px -2px rgba(51, 51, 51, 0.2), 0 1px 5px 0 rgba(51, 51, 51, 0.12);
-}
-.canales .card img {
-	margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Raleway';}
-body{background-color:#000010;}
-div .card{
-overflow-x: scroll;
-overflow-y: hidden;
-	margin: 5%;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	position: relative;
-	border-radius: 10%;
-}
-
-.dropdown {
-	position: relative;
-	display: inline-block;
-}
-
-
-
-
-.dropdown-menu>li>a:focus,
-.dropdown-menu>li>a:hover {
-	color: #262626;
-	text-decoration: none;
-	background-color: #f5f5f5
-}
-
-
-</style>
-
-</head><body ondragstart="return false" ondrop="return false" onselectstart="return false" oncontextmenu="return false">
+<body ondragstart="return false" ondrop="return false" onselectstart="return false" oncontextmenu="return false">
 
 
 <input class="tab" id="tab1" type="radio" name="tabs" checked="">
@@ -282,53 +132,58 @@ overflow-y: hidden;
   
 
 
+  
 <div class="dropdown">
-<a href="/PeliSer/Doramas/El juego del calamar" class="card  " data-toggle="dropdown" title="El juego del calamar">
-<img src="https://www.themoviedb.org/t/p/original/uSqnBM7TLpYFK77EfYZQZjmJDXX.jpg" width="110px" heigth="160px"></a></div>
-
-<div class="dropdown">
-<a href="/PeliSer/Doramas/Mermelada de naranja" class="card " data-toggle="dropdown" title="Mermelada de naranja">
-<img src="https://www.themoviedb.org/t/p/original/4y59CKPFxdz51BN3K4SeeO5Ift0.jpg" width="110px" heigth="160px"></a></div>
+<a href="/PeliSer/Doramas/Un Amor Loco" class="card poster col-15 col-md-8 " data-toggle="dropdown" title="Un Amor Loco | 2021">
+<img src="https://www.themoviedb.org/t/p/original/sav9luRrij21rBQfhUcbiI0e5XQ.jpg" width="90px" heigth="135px"></a></div>    
 
 <div class="dropdown">
-<a href="/PeliSer/Doramas/My Runway" class="card " data-toggle="dropdown" title="My Runway">
-<img src="https://www.themoviedb.org/t/p/original/tCKwuuTZr5Yx8rTt1FWvQKDrXnw.jpg" width="110px" heigth="160px"></a></div>  
-
-
+<a href="/PeliSer/Doramas/El juego del calamar" class="card poster col-15 col-md-8 " data-toggle="dropdown" title="El juego del calamar">
+<img src="https://www.themoviedb.org/t/p/original/uSqnBM7TLpYFK77EfYZQZjmJDXX.jpg" width="90px" heigth="135px"></a></div>
 
 <div class="dropdown">
-<a href="/PeliSer/Doramas/Holo, mi amor" class="card " data-toggle="dropdown" title="Holo mi amor">
-<img src="https://www.themoviedb.org/t/p/original/umvrWjTyVgW9ulC4noFd2kuZJRM.jpg" width="110px" heigth="160px"></a></div>
+<a href="/PeliSer/Doramas/Mermelada de naranja" class="card poster col-15 col-md-8 " data-toggle="dropdown" title="Mermelada de naranja">
+<img src="https://www.themoviedb.org/t/p/original/4y59CKPFxdz51BN3K4SeeO5Ift0.jpg" width="90px" heigth="135px"></a></div>
 
 <div class="dropdown">
-<a href="/PeliSer/Doramas/Hola Soy yo.html" class="card " data-toggle="dropdown" title="Hola Soy yo">
-<img src="https://www.themoviedb.org/t/p/original/8ZlKn5qEuv3wTzHyG4RSWJY81ec.jpg" width="110px" heigth="160px"></a></div>
+<a href="/PeliSer/Doramas/My Runway" class="card poster col-15 col-md-8 " data-toggle="dropdown" title="My Runway">
+<img src="https://www.themoviedb.org/t/p/original/tCKwuuTZr5Yx8rTt1FWvQKDrXnw.jpg" width="90px" heigth="135px"></a></div>  
 
-<div class="dropdown">
-<a href="/PeliSer/Doramas/Pasadizo De Emergencia" class="card " data-toggle="dropdown" title="Pasadizo De Emergencia">
-<img src="https://www.themoviedb.org/t/p/original/8MSjQkH2FrG0t4l84L5HmiSFrS7.jpg" width="110px" heigth="160px"></a></div>
-
-<div class="dropdown">
-<a href="/PeliSer/Doramas/El Hada De Las Pesas" class="card " data-toggle="dropdown" title="El Hada De Las Pesas">
-<img src="https://www.themoviedb.org/t/p/original/4CrTjZ5MYdF5dtSockIStCkiX5C.jpg" width="110px" heigth="160px"></a></div>
-
-<div class="dropdown">
-<a href="/PeliSer/Doramas/El cielo te está esperando" class="card " data-toggle="dropdown" title="El cielo te está esperando">
-<img src="https://www.themoviedb.org/t/p/w440_and_h660_face/n277gYwCQOBcTnACEwiyU7Xg1m2.jpg" width="110px" heigth="160px"></a></div>
-
-<div class="dropdown">
-<a href="/PeliSer/Serie/Recuerdos de Juventud.html" class="card " data-toggle="dropdown" title="Recuerdos de Juventud">
-<img src="https://www.themoviedb.org/t/p/original/54yTLS5d4OPOuunzOvHlmP82eIT.jpg" width="110px" heigth="160px"></a></div>
 
 
 <div class="dropdown">
-<a href="/PeliSer/Serie/Tierra trágame.html" class="card " data-toggle="dropdown" title="Tierra trágame">
-<img src="https://www.themoviedb.org/t/p/original/wiByXTq5vaDppWnYCLt6fzDuu7x.jpg" width="110px" heigth="160px"></a></div>
+<a href="/PeliSer/Doramas/Holo, mi amor" class="card poster col-15 col-md-8 " data-toggle="dropdown" title="Holo mi amor">
+<img src="https://www.themoviedb.org/t/p/original/umvrWjTyVgW9ulC4noFd2kuZJRM.jpg" width="90px" heigth="135px"></a></div>
+
+<div class="dropdown">
+<a href="/PeliSer/Doramas/Hola Soy yo.html" class="card poster col-15 col-md-8 " data-toggle="dropdown" title="Hola Soy yo">
+<img src="https://www.themoviedb.org/t/p/original/8ZlKn5qEuv3wTzHyG4RSWJY81ec.jpg" width="90px" heigth="135px"></a></div>
+
+<div class="dropdown">
+<a href="/PeliSer/Doramas/Pasadizo De Emergencia" class="card poster col-15 col-md-8 " data-toggle="dropdown" title="Pasadizo De Emergencia">
+<img src="https://www.themoviedb.org/t/p/original/8MSjQkH2FrG0t4l84L5HmiSFrS7.jpg" width="90px" heigth="135px"></a></div>
+
+<div class="dropdown">
+<a href="/PeliSer/Doramas/El Hada De Las Pesas" class="card poster col-15 col-md-8 " data-toggle="dropdown" title="El Hada De Las Pesas">
+<img src="https://www.themoviedb.org/t/p/original/4CrTjZ5MYdF5dtSockIStCkiX5C.jpg" width="90px" heigth="135px"></a></div>
+
+<div class="dropdown">
+<a href="/PeliSer/Doramas/El cielo te está esperando" class="card poster col-15 col-md-8 " data-toggle="dropdown" title="El cielo te está esperando">
+<img src="https://www.themoviedb.org/t/p/w440_and_h660_face/n277gYwCQOBcTnACEwiyU7Xg1m2.jpg" width="90px" heigth="135px"></a></div>
+
+<div class="dropdown">
+<a href="/PeliSer/Serie/Recuerdos de Juventud.html" class="card poster col-15 col-md-8 " data-toggle="dropdown" title="Recuerdos de Juventud">
+<img src="https://www.themoviedb.org/t/p/original/54yTLS5d4OPOuunzOvHlmP82eIT.jpg" width="90px" heigth="135px"></a></div>
 
 
 <div class="dropdown">
-<a href="/PeliSer/Serie/Es Mío.html" class="card " data-toggle="dropdown" title="Es Mio">
-<img src="https://www.themoviedb.org/t/p/original/69QIVItTwslQsZpqLuCNyhxk4cC.jpg" width="110px" heigth="160px"></a></div>
+<a href="/PeliSer/Serie/Tierra trágame.html" class="card poster col-15 col-md-8 " data-toggle="dropdown" title="Tierra trágame">
+<img src="https://www.themoviedb.org/t/p/original/wiByXTq5vaDppWnYCLt6fzDuu7x.jpg" width="90px" heigth="135px"></a></div>
+
+
+<div class="dropdown">
+<a href="/PeliSer/Serie/Es Mío.html" class="card poster col-15 col-md-8 " data-toggle="dropdown" title="Es Mio">
+<img src="https://www.themoviedb.org/t/p/original/69QIVItTwslQsZpqLuCNyhxk4cC.jpg" width="90px" heigth="135px"></a></div>
 
 </div></section>
 
@@ -339,11 +194,11 @@ overflow-y: hidden;
 
 <div class="dropdown">
 <a href="#" class="card dropdown-toggle" data-toggle="dropdown" title="Fox Sports 1">
-<img src="#" width="115px" heigth="160px"></a></div>
+<img src="#" width="115px" heigth="135px"></a></div>
 
 <div class="dropdown">
 <a href="#" class="card dropdown-toggle" data-toggle="dropdown" title="Fox Sports 2">
-<img src="#" width="115px" heigth="160px"></a></div>
+<img src="#" width="115px" heigth="135px"></a></div>
 
 </div></section>-->
 
@@ -354,11 +209,11 @@ overflow-y: hidden;
 
 <div class="dropdown">
 <a href="#" class="card dropdown-toggle" data-toggle="dropdown" title="Fox Sports 1">
-<img src="#" width="115px" heigth="160px"></a></div>
+<img src="#" width="115px" heigth="135px"></a></div>
 
 <div class="dropdown">
 <a href="#" class="card dropdown-toggle" data-toggle="dropdown" title="Fox Sports 2">
-<img src="#" width="115px" heigth="160px"></a></div>
+<img src="#" width="115px" heigth="135px"></a></div>
 
 
 </div></section>-->
@@ -368,11 +223,11 @@ overflow-y: hidden;
 
 <div class="dropdown">
 <a href="#" class="card dropdown-toggle" data-toggle="dropdown" title="Fox Sports 1">
-<img src="#" width="115px" heigth="160px"></a></div>
+<img src="#" width="115px" heigth="135px"></a></div>
 
 <div class="dropdown">
 <a href="#" class="card dropdown-toggle" data-toggle="dropdown" title="Fox Sports 2">
-<img src="#" width="115px" heigth="160px"></a></div>
+<img src="#" width="115px" heigth="135px"></a></div>
 
 </div></section>-->
 
