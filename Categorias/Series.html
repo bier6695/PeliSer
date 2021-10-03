@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es" x-data="{ menu: false, search: false, dark: true, cinema: false }"  :class="{ 'mn_on overflow-hidden lg:overflow-visible': menu, 'dark': dark, 'lOff': cinema }"
+@keydown.escape="{ menu = false, search = false, cinema: false }" class="light">
+   <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv.png" />	
 <title>CineSeriesTv</title><!-- Bootstrap -->
+
+
+
 <link rel="stylesheet" href="https://bier6695.github.io/documentos/src/bootstrap.min.css">
 <link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/nsfp12214u1wvja/moficado%20poster.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,6 +19,7 @@
 <link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/i03lwlt39gggruj/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <script src="https://www.dl.dropboxusercontent.com/s/5u03wtyxvalchsy/de%20categor%C3%ADa.js"></script>
 <link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/ujhxy0imosbsx5t/del%20buscador.css">
+<link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/johv0xw7nmiwdq0/slider%20categor%C3%ADa.css">
 <style>
 
 
@@ -69,6 +73,10 @@
 
 
 
+            <!-- categorias -->
+
+
+
 
 <!---Fin de las Categorías--->
 
@@ -116,31 +124,31 @@
 <!--<label for="tab4"><i class="fas fa-lock"></i></label>-->
 <!--<label><i class="fas fa-bell"></i></label>-->
 
-<div class="tab-title"><center>
-  <style type="text/css">
-@import url("https://bier6695.github.io/PeliSer/Formulario/Género.css");
-</style>
-<center>
-<div class="ioaj cplzb"><ul>
-<li class="jhak"><a href="go:Series">Series</a></li>
-<li><a href="https://bier6695.github.io/PeliSer/Categorias/Categoria-Novelas.html">Telenovelas</a></li>
-<li><a href="https://bier6695.github.io/PeliSer/Categorias/Categoria-Doramas.html">Doramas</a></li></ul></div>
+
 
 
 </ul>
-<div class="tab-title"><center>Películas</div>
+<div class="tab-title"><center>Series</div>
 </center>
 
+<ul class="mnlst relative whitespace-nowrap overflow-x-auto">
+  <center>
+<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Series">Series</a></li>
+               
+<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Novelas">Telenovelas</a></li>
+
+<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Doramas">Doramas</a></li>
+
+
+<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Animadas">Animadas</a></li>
+
+<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Shows">Shows de Tv</a></li>
+
+
+</center></ul>
 
   
-  
-</head>
-<body class="dark-mode">
-</div>
-<div class="row top-nav">
-<div class="col-sm-3 col-md-3 " >
-<div class="tab-title"><center>Series</div></center>
-</div>
+
 
 
 
@@ -492,5 +500,11 @@
 						
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://bier6695.github.io/PeliSer/Archivos/app.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+
+
+
+<script src="https://allpeliculas.ac/wp-content/themes/cinecalidad/assets/js/functions.js?v=5" defer></script>
 </body>
 </html>
