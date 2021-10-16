@@ -8,20 +8,13 @@
 <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv.png" />	
 <title>CineSeriesTv</title><!-- Bootstrap -->
 <link rel="stylesheet" href="https://bier6695.github.io/documentos/src/bootstrap.min.css">
-<link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/nsfp12214u1wvja/moficado%20poster.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/7p5huopj22330u5/buscador%20de%20categor%C3%ADa.css">
-<script src="https://www.dl.dropboxusercontent.com/s/4gky3sbyedu8tqv/jquery-3.1.0.js"></script>
-<script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
-<link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/i03lwlt39gggruj/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<script src="https://www.dl.dropboxusercontent.com/s/5u03wtyxvalchsy/de%20categor%C3%ADa.js"></script>
-<link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/ujhxy0imosbsx5t/del%20buscador.css">
-<style>
-
-
-</style>
-
-
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/style.css">
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/fontawesome-pro.css">
+<script src="https://bier6695.github.io/documentos/src/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" href="https://bier6695.github.io/documentos/src/estilosearch.css">
+<script src="https://bier6695.github.io/documentos/src/jquery.js"></script>
+<script src="https://bier6695.github.io/documentos/src/jquery.dataTables.min.js"></script>
+<script src="https://bier6695.github.io/documentos/src/font-awesome.jsy"></script>
 </head>
 <body class="dark-mode">
 <div class="container-fluid">
@@ -30,361 +23,457 @@
 <h2 class="page-header logo-app">
 <img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv.png"></h2>
 <div class="nav-bar-container">
-<nav class="navbar bg-light left-navbar">
+<nav class="navbar bg-light left-navbar"  >
 <ul class="navbar-nav">
-<a class="btn  btn-subscription"><i class=""></i> Bienvenido</a>
-<li class="nav-item active"><a  class="nav-link" href="go:home"> <i class=""></i>🏠 Home</a></li class="nav-item">
-<li class="nav-item"><a class="nav-link" href="go:Peliculas"><i class=""></i>🎬 Peliculas</a></li class="nav-item">
-<li class="nav-item"><a class="nav-link" href="go:Series"><i class=""></i>📺 Series</a></li class="nav-item">
-<li class="nav-item"><a href="http://action_offices" target="_blank"><i class=""></i>🛎️ Solicitar Contenido</a></li class="nav-item">
+<a class="btn  btn-subscription"><i class="fas fa-star"></i> Bienvenido</a>
+<li class="nav-item active"><a  class="nav-link" href="go:home"> <i class="fas fa-home"></i> Home</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/Peliculas.html"><i class="fas fa-film"></i>  Peliculas</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/Series.html"><i class="fa fa-desktop"></i> Series</a></li class="nav-item">
+<li class="nav-item"><a href="http://action_offices" target="_blank"><i class="fa fa-pencil fa-fw"></i> Solicitar Contenido</a></li class="nav-item">
 <li class="nav-item"><a href="#" target="_blank"><i class=""></i><span style="color: #F44336;"> -----------------------------------------</a></li class="nav-item">
-<li class="nav-item"><a class="nav-link" href="http://action_profile" target="_blank"><i class=""></i>👥 Perfil</a></li class="nav-item">
-<li class="nav-item"><a class="nav-link" href="http://action_notifications" target="_blank"><i class=""></i>🔔 Notificaciones</a></li class="nav-item">
-<li class="nav-item"><a class="nav-link" href="http://action_share" target="_blank"><i class=""></i>🔀 Compartir App</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="http://action_profile" target="_blank"><i class="fas fa-user"></i> Perfil</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="http://action_notifications" target="_blank"><i class="fa fa-bell"></i> Notificaciones</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="http://action_share" target="_blank"><i class="fas fa-share"></i> Compartir App</a></li class="nav-item">
 <li class="nav-item"><a href="#" target="_blank"><i class=""></i><span style="color: #F44336;"> -----------------------------------------</a></li class="nav-item">
-<li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/DMCA.html"><i class=""></i>📖 D M C A</a></li class="nav-item">
-<li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/Politica-de-privacidad.html"><i class=""></i>👨‍⚖️ Política de privacidad</a></li class="nav-item">
-<li class="nav-item"><a href="mailto: cineplaysoporte@gmail.com?Subject=Reportar%20un%20error%20" target="_blank"><i class=""></i>⚙️ Soporte Técnico</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/DMCA.html"><i class="fas fa-lock"></i> D M C A</a></li class="nav-item">
+<li class="nav-item"><a class="nav-link" href="/PeliSer/Categorias/Politica-de-privacidad.html"><i class="fas fa-lock"></i> Política de privacidad</a></li class="nav-item">
+<li class="nav-item"><a href="mailto: cineplaysoporte@gmail.com?Subject=Reportar%20un%20error%20" target="_blank"><i class="fa fa-user"></i> Soporte Técnico</a></li class="nav-item">
 </ul></nav></div></div>
 <div class="close-menu-left-btn"></div>
 <div class="main">
 <div class="xs-header" >
-<button class="btn btn-primary float-left menu-left-btn">≡≡</i></button>
+<button class="btn btn-primary float-left menu-left-btn"><i class="fas fa-bars"></i></button>
 <img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/CineSeriesTv.png">
 <div class="btn-group  float-right">
-<button type="button" class="btn btn-primary dropdown-toggle" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="for-desktop"> CineSeriesTv </span> 
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="for-desktop"> CineSeriesTv </span> 
 <img src="https://bier6695.github.io/PeliSer/Archivos/perfil.jpg"></button>
 <div class="dropdown-menu dropdown-login">
 <li class="nav-item"><a class="nav-link" href="http://action_profile" target="_blank"><i class="fas fa-user"></i> Perfil</a></li class="nav-item">
 <li class="nav-item"><a class="nav-link" href="mailto:cineplaysoporte@gmail.com?Subject=Solicitud%20de%20Contenido%20Cineseriestv" target="_blank"><i class="fad fa-envelope"></i> Contáctanos</a></li class="nav-item">
-<a class="dropdown-item" href="http://action_exit"><i class=""></i> Salir</a>
+<a class="dropdown-item" href="http://action_exit"><i class="fas fa-sign-out-alt"></i> Salir</a>
 </div></div>
-
+<button class="btn btn-primary float-right search-btn"><i class="fas fa-search"></i></button></div>
 
   <!---Inicio de las categorías--->
 
+<style type="text/css">
+@import url("https://bier6695.github.io/PeliSer/Formulario/Género.css");
+</style>
 
-
-<!---Slider tipo Portada--->
-
-
+<div class="ioaj cplzb"><ul>
+<li class="jhak"><a href="/PeliSer/Categorias/Categoria-Terror y Suspenso.html">Terror y Suspenso</a></li>
+<li><a href="/PeliSer/Categorias/Peliculas.html">Todas</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Accion.html">Acción</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Comedia.html">Comedia</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Ciencia Ficción.html">Ciencia Ficción</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Animacion.html">Animación</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Drama.html">Drama</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Romance.html">Romance</a></li>
+<li><a href="/PeliSer/Categorias/Categoria-Fantasia.html">Fantasía</a></li></ul></div>
 
 
 <!---Fin de las Categorías--->
 
+<div class="row top-nav">
+<div class="col-sm-4 col-md-4 " > 
 
 
-
-</div>  
-  
-<div id="search-par">
-<i class="material-icons" id="search1">search</i>
-<input type="myInput" id="myInput" placeholder="Buscar aqui">
-<div class="content-search">
-<div class="content-table">
-<table id="table">
-<thead><tr><td></td></tr>
-</thead><tbody>
-  
-
-<!---No tocar esto--->
-</tbody></table></div></div>
-<i class="material-icons" id="icons2">mic</i>
+</head>
+<body class="dark-mode">
 </div>
-
-
-
-</head><body ondragstart="return false" ondrop="return false" onselectstart="return false" oncontextmenu="return false">
-
-
-<input class="tab" id="tab1" type="radio" name="tabs" checked="">
-
-<!--<label for="tab1"><i class="fas fa-tv"></i></label>-->
-<!--<input class="tab" id="tab2" type="radio" name="tabs">-->
-
-<!--<label for="tab2"><i class="fas fa-film"></i></label>-->
-<!--<input class="tab" id="tab3" type="radio" name="tabs">-->
-
-<!--<label for="tab3"><i class="fas fa-futbol"></i></label>-->
-<!--<input class="tab" id="tab4" type="radio" name="tabs">-->
-
-<!--<label for="tab4"><i class="fas fa-lock"></i></label>-->
-<!--<label><i class="fas fa-bell"></i></label>-->
-
-
-
-
-<link rel="stylesheet" href="https://www.dl.dropboxusercontent.com/s/johv0xw7nmiwdq0/slider%20categor%C3%ADa.css">
-
-</ul>
-<div class="tab-title"><center>Terror</div>
-</center>
-
-<ul class="mnlst relative whitespace-nowrap overflow-x-auto">
-  <center>
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Peliculas">Películas</a></li>
-               
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Accion">Acción</a></li>
-
-
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Romance">Romance</a></li>
-
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Comedia">Comedia</a></li>
-
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Animacion">Animación</a></li>
-
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:CienciaFic">Ciencia Ficción</a></li>
-
-
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Fantasia">Fantasía</a></li>
-
-
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Drama">Drama</a></li>
-
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Suspenso">Suspenso</a></li>
-
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Anime">Anime</a></li>
-
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Aventura">Aventura</a></li>
-
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Crimen">Crimen</a></li>
-
-<li class="inline-flex"><a class="btn rounded px-4 py-2 text-sm inline-flex font-medium bg-yellow-300 text-gray-800 hover:bg-yellow-400 dark:text-gray-900 dark:hover:text-gray-900" href="go:Misterio">Misterio</a></li>
-
-
-</center></ul>
-
-
-
-
-
-<br>
-<br>
-
-
-<div class="canales">
-  
- 
-
-
-
-
-
-
-
-<div class="dropdown"> 
-<a href="/PeliSer/Peliculas/Black as Night" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Black as Night 2021" >
-<img src="https://www.themoviedb.org/t/p/original/493SD4ELBqXOz6226sowA126H20.jpg" width="90px" heigth="135px"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Candyman" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Candyman 2021">
-<img src="https://www.themoviedb.org/t/p/original/40FuQAiHjCvh9fYFigGAVWJ6Czu.jpg" width="90px" heigth="135px" ></a></div>
- 
-<div class="dropdown"> 
-<a href="/PeliSer/Peliculas/Mamá te Quiere" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Mamá te Quiere 2020">
-<img src="https://www.themoviedb.org/t/p/original/rEeTuQSsEyM2bSG7rwvm23WJjfg.jpg" width="90px" heigth="135px"></a></div>
-
-
-
-<div class="dropdown"> 
-<a href="/PeliSer/Peliculas/Tiempo" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Tiempo">
-<img src="https://www.themoviedb.org/t/p/original/ggXWPAIPz0LciOc4hwKIctP4xV2.jpg"  width="90px" heigth="135px"></a></div>
-
-<div class="dropdown"> 
-<a href="/PeliSer/Peliculas/Presencias Inexplicables" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Presencias Inexplicables 2020">
-<img src="https://www.themoviedb.org/t/p/original/4TWFTtdrDjPJHuhwU3UFttbKgyw.jpg" width="90px" heigth="135px" ></a></div>
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Caleb" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Caleb 2020">
-<img src="https://www.themoviedb.org/t/p/original/7nEKRElEMUIT0ufusS9QZxbxxQb.jpg" width="90px" heigth="135px"></a></div>
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Cuentos al Caer la Noche" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Cuentos al Caer la Noche 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/5rgRK0Hwt6KcQzn5MEc34JlR5RV.jpg"></a></div>
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/La Leyenda del Chupacabras" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="La Leyenda del Chupacabras 2016">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/137StSquVSbMhLUB55kmRhMC8t8.jpg"></a></div>
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Maligno" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Maligno 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/9eo0feDgFvAV4rDrQw6TyNAjSes.jpg"></a></div>
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Escape Room 2 - Mueres por salir" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Escape Room 2 - Mueres por salir 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/hBD44n4mmcckzM7rDgB3CGi12f7.jpg"></a></div>
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Espiral El juego del miedo continúa" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Espiral El juego del miedo continúa 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/qIlRt4op22B69QUbLlfif2lFHVs.jpg"></a></div>
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Las Formas Antiguas" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Las Formas Antiguas 2020">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/sZqaqEFeuzlgp31y3B4K6ysIl0S.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Annabelle vuelve a casa.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Annabelle vuelve a casa">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/zxwPksbRKGaAi06rapPfFTVsMHv.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Annabelle 2 La Creación.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Annabelle 2 La Creación">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/zKZ10EmU56OzThvsbxBQYdXptty.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Annabelle.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Annabelle">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/y84GATalgc1VA0GzyFNxCmAHkTN.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Terapia del Miedo.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Terapia del Miedo 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/oYlAnaH1dClevLyKl5hkNqZeKib.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Huérfano.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Huérfano">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/ibWwqe0R5II0PmgL6Y0TdnfxvD.jpg"></a></div>
-
-
-<div class="dropdown"> <a href="/PeliSer/Peliculas/Feliz día de tu muerte 2.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Feliz día de tu muerte 2 2019">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/q6PSTBNlI9WtfuMlngz82yaudUg.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Feliz día de tu muerte.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Feliz día de tu muerte 2017">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/uWmwvOvsbshDzOz5Zjb73AuAtN1.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/No respires 2.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="No rerespires 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/nR8kDV11jeRWdcjMwavbqFrJolR.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/No respires.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="No respires 2016">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/3A5sAyP9iENTRL5X86FUeYmo0wZ.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Spare Parts.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Spare Parts 2020">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/original/ih3ZHVQMV59fSOxLYpSQuCKC3I2.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Las voces.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Las voces 2014">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/w440_and_h660_face/pcecWMoTJaK6gJQd2Z9s6IOAw8x.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Freaky.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Freaky 2020">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/w440_and_h660_face/56F2g4tnPerzfKhHMp1mKu0d2uo.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/El Atrapa Sueños.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="El Atrapa Sueños 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/qUyFrgb3jf3f991vm60LOYDkFGM.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Ruega por nosotros.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Ruega por nosotros 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/hPoOn553ARmSQl0ChKTlGDvYq9x.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Medianoche en el Switchgrass.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Medianoche en el Switchgrass 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/1OTSuh2HNcTRfme8caU8DjgJ39K.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Cielo rojo sangre.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Cielo rojo sangre 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/ky8Fua6PD7FyyOA7JACh3GDETli.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/La calle del terror - Parte 3 1666.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="La calle del terror Parte 3 1666 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/ouTHprNeiOYDS5zw5x7wrBF79q7.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/La calle del terror Parte 2 1978.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="La calle del terror Parte 2 1978 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/dEwIduMFhLKEcx9hxCuv7zX9LN2.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/La calle del terror Parte 1 1994.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="La calle del terror Parte 1 1994 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/w220_and_h330_face/xGf1snRLGQpiUkWvJSGwiSXW9sR.jpg"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/La Purga Infinita.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="La Purga Infinita 2021">
-<img width="90px" heigth="135px" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/r2t07ky5WFRiI0bXLRIQCjalNkj.jpg"></a></div>
-
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Ni un paso en falso.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Ni un paso en falso">
-<img src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/34BmdJkdvRweC3xJJFlOFQ2IbYc.jpg" width="90px" heigth="135px"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/El despertar de los dragones (SPL2).html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="El despertar de los dragones (SPL2) 2015">
-<img src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/lTfR7rMkLSguHCfhHRqUxzd1XiO.jpg" width="90px" heigth="135px"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Sin remordimientos.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Sin remordimientos">
-<img src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/rEm96ib0sPiZBADNKBHKBv5bve9.jpg" width="90px" heigth="135px"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Un lugar en silencio 2.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Un lugar en silencio 2 2021">
-<img src="https://www.themoviedb.org/t/p/w220_and_h330_face/iNOCVFyrsykGqT48JNotgFF9XCf.jpg" width="90px" heigth="135px"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Un lugar en silencio.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Un lugar en silencio">
-<img src="https://www.themoviedb.org/t/p/w220_and_h330_face/5pairI20KJs1SEa4Z8yAsPR779m.jpg" width="90px" heigth="135px"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/El ejército de los Muertos" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="El ejército de los Muertos 2021">
-<img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/El%20ej%C3%A9rcito%20de%20los%20Muertos%20post.jpg" width="90px" heigth="135px"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/El Conjuro 3 - El Diablo me Obligó a Hacerlo.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Despierta la Furia 2021">
-<img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/El%20Conjuro%203%20post.jpg" width="90px" heigth="135px"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Cómo me convertí en superhéroe.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Cómo me convertí en superhéroe">
-<img src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/1tcQdrmvVooaZs6niLIX1DnaZxB.jpg" width="90px" heigth="135px"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/the dollmaker.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="the dollmaker">
-<img src="https://www.themoviedb.org/t/p/w220_and_h330_face/dJehoFl9G3Mv2Yp0LooRMB15fVI.jpg" width="90px" heigth="135px"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/Slaxx.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="Slaxx">
-<img src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Slaxx%20poster.jpg" width="90px" heigth="135px"></a></div>
-
-
-<div class="dropdown">
-<a href="/PeliSer/Peliculas/La víctima perfecta.html" class="card poster col-15 col-md-2 col-xxl-2" data-toggle="dropdown" title="La victima perfecta 2011">
-<img src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/hoZiRe5EK4vIUjvjRf1aUk5RVg4.jpg" width="90px" heigth="135px"></a></div>
-
+<div class="row top-nav">
+<div class="col-sm-3 col-md-3 " >
+<div class="tab-title">Terror y Suspenso</div>
+</div>
+<div class="row content-section">
+<div></div>
+
+
+
+
+
+ <div class="dropdown">
+<a href="/PeliSer/Peliculas/Halloween Kills" class="card poster col-15 col-md-8 col-xxl-4" data-toggle="dropdown" title="Halloween Kills | Halloween Kills La noche aún no termina | 2021">
+<img src="https://www.themoviedb.org/t/p/original/5zPNs90yGHKdKadN2Bz32Pug8jY.jpg" width="90px" heigth="135px"></a></div>    
+
+<a href="/PeliSer/Peliculas/Black as Night" title="Black as Night"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/493SD4ELBqXOz6226sowA126H20.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year"> 2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Candyman" title="Candyman"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/40FuQAiHjCvh9fYFigGAVWJ6Czu.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year"> 2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Mamá te Quiere" title="Mamá te Quiere"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/rEeTuQSsEyM2bSG7rwvm23WJjfg.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year"> 2020</span>
+</div>
+</div>
+</a>
+
+
+<a href="/PeliSer/Peliculas/Tiempo" title="Tiempo"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/ggXWPAIPz0LciOc4hwKIctP4xV2.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year"> 2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Presencias Inexplicables" title="Presencias Inexplicables"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/4TWFTtdrDjPJHuhwU3UFttbKgyw.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year"> 2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Caleb" title="Caleb"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/7nEKRElEMUIT0ufusS9QZxbxxQb.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year"> 2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Cuentos al Caer la Noche" title="Cuentos al Caer la Noche"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/5rgRK0Hwt6KcQzn5MEc34JlR5RV.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year"> 2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/La Leyenda del Chupacabras" title="La Leyenda del Chupacabras"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/137StSquVSbMhLUB55kmRhMC8t8.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year"> 2016</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Maligno" title="Maligno"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/9eo0feDgFvAV4rDrQw6TyNAjSes.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year"> 2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Escape Room 2 - Mueres por salir" title="Escape Room 2 - Mueres por salir"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/hBD44n4mmcckzM7rDgB3CGi12f7.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year"> 2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Espiral El juego del miedo continúa" title="Espiral El juego del miedo continúa"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/qIlRt4op22B69QUbLlfif2lFHVs.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Las Formas Antiguas" title="Las Formas Antiguas"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/sZqaqEFeuzlgp31y3B4K6ysIl0S.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Annabelle vuelve a casa.html" title="Annabelle vuelve a casa"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/zxwPksbRKGaAi06rapPfFTVsMHv.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Annabelle 2 La Creación.html" title="Annabelle 2 La Creación"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/zKZ10EmU56OzThvsbxBQYdXptty.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2017</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Annabelle.html" title="Annabelle"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/y84GATalgc1VA0GzyFNxCmAHkTN.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2014</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Terapia del Miedo.html" title="Terapia del Miedo"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/oYlAnaH1dClevLyKl5hkNqZeKib.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Huérfano.html" title="Huérfano"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/ibWwqe0R5II0PmgL6Y0TdnfxvD.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Feliz día de tu muerte 2.html" title="Feliz día de tu muerte 2"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/q6PSTBNlI9WtfuMlngz82yaudUg.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2019</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Feliz día de tu muerte.html" title="Feliz día de tu muerte"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/uWmwvOvsbshDzOz5Zjb73AuAtN1.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2017</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/No respires 2.html" title="No respires 2"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/nR8kDV11jeRWdcjMwavbqFrJolR.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/No respires.html" title="No respires"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/3A5sAyP9iENTRL5X86FUeYmo0wZ.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2016</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Spare Parts.html" title="Spare Parts"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/original/ih3ZHVQMV59fSOxLYpSQuCKC3I2.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Las voces.html" title="Las voces"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w440_and_h660_face/pcecWMoTJaK6gJQd2Z9s6IOAw8x.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2014</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Freaky.html" title="Freaky"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w440_and_h660_face/56F2g4tnPerzfKhHMp1mKu0d2uo.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2020</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El Atrapa Sueños.html" title="El Atrapa Sueños"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/qUyFrgb3jf3f991vm60LOYDkFGM.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Ruega por nosotros.html" title="Ruega por nosotros"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/hPoOn553ARmSQl0ChKTlGDvYq9x.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Medianoche en el Switchgrass.html" title="Medianoche en el Switchgrass"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/1OTSuh2HNcTRfme8caU8DjgJ39K.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Cielo rojo sangre.html" title="Cielo rojo sangre"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/ky8Fua6PD7FyyOA7JACh3GDETli.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/La calle del terror - Parte 3 1666.html" title="La calle del terror - Parte 3 1666"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/ouTHprNeiOYDS5zw5x7wrBF79q7.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/La calle del terror Parte 2 1978.html" title="La calle del terror Parte 2 1978"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/dEwIduMFhLKEcx9hxCuv7zX9LN2.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/La calle del terror Parte 1 1994.html" title="La calle del terror Parte 1 1994"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w220_and_h330_face/xGf1snRLGQpiUkWvJSGwiSXW9sR.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/La Purga Infinita.html" title="La Purga Infinita"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/r2t07ky5WFRiI0bXLRIQCjalNkj.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Ni un paso en falso.html" title="Ni un paso en falso"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/34BmdJkdvRweC3xJJFlOFQ2IbYc.jpg"/>
+<div>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El despertar de los dragones (SPL2).html" title="El despertar de los dragones (SPL2)"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/lTfR7rMkLSguHCfhHRqUxzd1XiO.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2015</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Sin remordimientos.html" title="Sin remordimientos"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/rEm96ib0sPiZBADNKBHKBv5bve9.jpg"/>
+<div>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Un lugar en silencio 2.html" title="Un lugar en silencio 2"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w220_and_h330_face/iNOCVFyrsykGqT48JNotgFF9XCf.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Un lugar en silencio.html" title="Un lugar en silencio"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w220_and_h330_face/5pairI20KJs1SEa4Z8yAsPR779m.jpg"/>
+<div>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El ejército de los Muertos" title="El ejército de los Muertos"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/El%20ej%C3%A9rcito%20de%20los%20Muertos%20post.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/El Conjuro 3 - El Diablo me Obligó a Hacerlo.html" title="Despierta la Furia"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/El%20Conjuro%203%20post.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2021</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Jurassic World.html" title="Jurassic World"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/tLY0crgPAwIBiwkF7lDLmEjBWyn.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2015</span>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Cómo me convertí en superhéroe.html" title="Cómo me convertí en superhéroe"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/1tcQdrmvVooaZs6niLIX1DnaZxB.jpg"/>
+<div>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/the dollmaker.html" title="the dollmaker"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w220_and_h330_face/dJehoFl9G3Mv2Yp0LooRMB15fVI.jpg"/>
+<div>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Slaxx.html" title="Slaxx"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://raw.githubusercontent.com/bier6695/PeliSer/main/Im%C3%A1genes%20de%20peliculas/Slaxx%20poster.jpg" />
+<div>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Proyecto Géminis.html" title="Proyecto Géminis"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w220_and_h330_face/fjCK5YIDRXrAnffd56zJOYfgF46.jpg"/>
+<div>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Chaos Walking.html" title="Chaos Walking"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w220_and_h330_face/a0R1Ybj3m4M4ZeztizD7F6fmPCE.jpg"/>
+<div>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/Tenet.html" title="Tenet"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/67p7XVP5SLup521iD9cAayMNt2U.jpg"/>
+<div>
+</div>
+</div>
+</a>
+<a href="/PeliSer/Peliculas/La víctima perfecta.html" title="La víctima perfecta"  class="poster col-4 col-md-2 col-xxl-2" >
+<div>
+<img width="170" height="255" src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/hoZiRe5EK4vIUjvjRf1aUk5RVg4.jpg"/>
+<div class="Image">
+<span style="top:.1.rem;bottom: auto;" class="Year">2011</span>
+</div>
+</div>
+</a>
 
 
 
 
 						
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-
+<script src="https://bier6695.github.io/PeliSer/Archivos/jquery.min.js"></script>
+<script src="https://bier6695.github.io/PeliSer/Archivos/popper.min.js"></script>
+<script src="https://bier6695.github.io/PeliSer/Archivos/bootstrap.min.js"></script>
 <script src="https://bier6695.github.io/PeliSer/Archivos/app.js"></script>
 </body>
 </html>
