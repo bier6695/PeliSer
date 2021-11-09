@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="noindex,nofollow,noarchive,norobots">
+<meta name="robots" content="noindex, nofollow" />
+<meta name="referrer" content="never" />
+<meta name="referrer" content="no-referrer" />
+<title>CineSeriesTv</title>
+<style>
+    html, body {margin:0; width:100%; height:100%; overflow:hidden;}
+    *{margin:0;padding:0;font-weight:normal;box-sizing: border-box;}
+    body{background:#000;color:#777;font-size:16px;font-family: arial;display: block;width:100%;height:100%;}
+    iframe {background: #000;height: 100vh;width: 100vw;}
+    video {width: 100%;}
+  </style>
+<script type="dbf132cf1aee4d48fe8634b3-text/javascript" src='//comagallopadvance.com/e0/0b/e7/e00be77d758ad476fccc1d5e60d7c426.js'></script>
+</head>
+<body>
+<iframe id="player" frameborder="0" id="iframe1" onload="$('.iframe-loading').css('background-image', 'none');" sandbox="allow-same-origin allow-scripts" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" width="100%" height="100%"></iframe>
+<script type="dbf132cf1aee4d48fe8634b3-text/javascript">
+    function initPlay() {
+      var $pl = document.getElementById('player');
+      var $img = document.createElement('img');
+      var location = document.location;
+      var $query = new URLSearchParams(location.search);
+      var $refs = { pelisplus2: 'pelisplus2', pelisplus: 'pelisplusio', cuevanahd: 'cuevanahd' };
+
+      $img.width = '0';
+      $img.height = '0';
+      
+      if ($query.get('sbx') === '1') {
+        $pl.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-forms');
+      }
+      $img.setAttribute('src', 'https://whos.amung.us/swidget/' + $refs[$query.get('ref')] + '.png');
+      $pl.setAttribute('src', location.hash['substr'](2));
+      document.body.appendChild($img);
+    }
+    initPlay();
+    //window.addEventListener('DOMContentLoaded', initPlay);
+  </script>
+<script type='text/javascript' src='//artistperhapscomfort.com/c6/ae/70/c6ae705dcfd0b52e77dc4fb538d5e98e.js'></script></body>
+</html>
