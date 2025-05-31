@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generador de Series con TMDB</title>
+  <style>
+    /* Estilos del generador (base) */
+    body { 
+      font-family: Arial, sans-serif; 
+      background-color: #121212; 
+      color: white; 
+      padding: 20px; 
+    }
+    .container { 
+      max-width: 800px; 
+      margin: auto; 
+    }
+    label { 
+      display: block; 
+      margin-top: 10px; 
+    }
+    input, textarea, select { 
+      width: 100%; 
+      padding: 8px; 
+      margin-top: 5px; 
+      border: none; 
+      border-radius: 4px; 
+      box-sizing: border-box; 
+    }
+    button { 
+      padding: 10px; 
+      background-color: #6200ea; 
+      color: white; 
+      border: none; 
+      border-radius: 4px; 
+      cursor: pointer; 
+      margin-top: 10px; 
+    }
+    .season-container, .chapter-container { 
+      border: 1px solid #444; 
+      padding: 10px; 
+      margin-top: 10px; 
+    }
+    #searchResults div { 
+      margin: 10px 0; 
+      padding: 10px; 
+      border: 1px solid #333; 
+      border-radius: 4px; 
+      display: flex; 
+      align-items: center; 
+    }
+    #searchResults img { 
+      border-radius: 4px; 
+    }
+    #searchResults button { 
+      margin-left: auto; 
+      background-color: #03a9f4; 
+    }
+    #searchResults button:hover { 
+      background-color: #0288d1; 
+    }
+    pre { 
+      background-color: #1e1e1e; 
+      padding: 15px; 
+      overflow: auto; 
+      white-space: pre-wrap; 
+      margin-top: 20px; 
+    }
+    code { 
+      font-family: monospace; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Generador de Series (con TMDB)</h1>
+
+    <!-- Selector para elegir si buscar Series o Películas -->
+    <h2>Tipo de Búsqueda</h2>
+    <label for="searchType">Seleccione:</label>
+    <select id="searchType">
+      <option value="tv">Series</option>
+      <option value="movie">Películas</option>
+    </select>
+
+    <!-- Campo para el servicio de streaming -->
+    <h2>Servicio de Streaming</h2>
+    <label for="streamingService">Servicio:</label>
+    <input type="text" id="streamingService" placeholder="Ej: Netflix">
+
+    <!-- Campo para URL del video (solo para películas) -->
+    <h2>Video (solo para películas)</h2>
+    <label for="videoUrl">URL del Video:</label>
+    <input type="url" id="videoUrl" placeholder="https://...">
+
+    <!-- Sección de búsqueda en TMDB -->
+    <h2>Búsqueda en TMDB</h2>
+    <label for="search">Buscar Título:</label>
+    <input type="text" id="search" placeholder="Ingrese el título">
+    <button type="button" onclick="searchTMDB()">Buscar en TMDB</button>
+    <div id="searchResults"></div>
+
+    <!-- Información general -->
+    <h2>Información General</h2>
+    <label for="series-title">Título:</label>
+    <input type="text" id="series-title" placeholder="Ej: Merlina">
+    <label for="synopsis">Sinopsis Global:</label>
+    <textarea id="synopsis" rows="4" placeholder="Sinopsis global"></textarea>
+    <label for="backgroundUrl">URL de Imagen de Fondo:</label>
+    <input type="url" id="backgroundUrl" placeholder="https://...">
+    <label for="posterUrl">URL del Póster Principal:</label>
+    <input type="url" id="posterUrl" placeholder="https://...">
+    <label for="tmdbId">TMDB ID:</label>
+    <input type="text" id="tmdbId" placeholder="ID de TMDB">
+    <label for="pageUrl">URL de la Página:</label>
+    <input type="url" id="pageUrl" placeholder="https://...">
+
+    <!-- Configuración de Temporadas (solo para series) -->
+    <h2>Configuración de Temporadas</h2>
+    <div id="seasons-container"></div>
+    <button type="button" onclick="addSeason()">Agregar Temporada</button>
+
+    <button type="button" onclick="generateSeriesCode()">Generar Código</button>
+
+    <h3>Código Generado:</h3>
+    <pre><code id="generatedCode"></code></pre>
+    <button type="button" onclick="downloadHTML()">Descargar HTML</button>
+  </div>
+
+  <script>
+    var TMDB_API_KEY = '686e8f50b2135e3c32f670ec018df888';
+
+    function searchTMDB() {
+      var searchType = document.getElementById('searchType').value; // 'tv' o 'movie'
+      var query = document.getElementById('search').value.trim();
+      if (!query) {
+        alert('Ingrese un título para buscar.');
+        return;
+      }
+      var url = "";
+      if (searchType === 'tv') {
+        url = "https://api.themoviedb.org/3/search/tv?api_key=" + TMDB_API_KEY + "&language=es-ES&query=" + encodeURIComponent(query);
+      } else {
+        url = "https://api.themoviedb.org/3/search/movie?api_key=" + TMDB_API_KEY + "&language=es-ES&query=" + encodeURIComponent(query);
+      }
+      fetch(url)
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        if (data.results && data.results.length > 0) {
+          showSearchResults(data.results);
+        } else {
+          document.getElementById('searchResults').innerHTML = "";
+          alert('No se encontraron resultados.');
+        }
+      })
+      .catch(function(error) {
+        console.error('Error TMDB:', error);
+        alert('Error al buscar en TMDB.');
+      });
+    }
+
+    function showSearchResults(results) {
+      var container = document.getElementById('searchResults');
+      container.innerHTML = "";
+      results.forEach(function(result) {
+        var title = (result.name || result.title) || "";
+        var date = (result.first_air_date || result.release_date) || "";
+        var poster = result.poster_path ? "https://image.tmdb.org/t/p/w92" + result.poster_path : "";
+        var div = document.createElement('div');
+        div.innerHTML = '<img src="' + poster + '" style="width:50px; margin-right:10px;"> ' +
+                        '<strong>' + title + '</strong> (' + date + ') ' +
+                        '<button type="button">Seleccionar</button>';
+        div.querySelector('button').addEventListener('click', function() { selectResult(result); });
+        container.appendChild(div);
+      });
+    }
+
+    function selectResult(result) {
+      var title = result.name || result.title || "";
+      var overview = result.overview || "";
+      var backdrop = result.backdrop_path ? "https://image.tmdb.org/t/p/original" + result.backdrop_path : "";
+      var poster = result.poster_path ? "https://image.tmdb.org/t/p/w500" + result.poster_path : "";
+      var id = result.id || "";
+      document.getElementById('series-title').value = title;
+      document.getElementById('synopsis').value = overview;
+      document.getElementById('backgroundUrl').value = backdrop;
+      document.getElementById('posterUrl').value = poster;
+      document.getElementById('tmdbId').value = id;
+      document.getElementById('searchResults').innerHTML = "";
+    }
+
+    // Manejo de temporadas (solo para series)
+    var seasonCount = 0;
+    function addSeason() {
+      seasonCount++;
+      var container = document.getElementById('seasons-container');
+      var seasonDiv = document.createElement('div');
+      seasonDiv.className = 'season-container';
+      seasonDiv.id = 'season-' + seasonCount;
+      seasonDiv.innerHTML = "\n" +
+        "<h3>Temporada " + seasonCount + "</h3>\n" +
+        "<label for='season-name-" + seasonCount + "'>Nombre de la Temporada:</label>\n" +
+        "<input type='text' id='season-name-" + seasonCount + "' placeholder='Ej: Saga Edolas'>\n" +
+        "<label for='season-synopsis-" + seasonCount + "'>Sinopsis de la Temporada:</label>\n" +
+        "<textarea id='season-synopsis-" + seasonCount + "' rows='3' placeholder='Sinopsis de la temporada'></textarea>\n" +
+        "<label for='season-poster-" + seasonCount + "'>URL del Póster de la Temporada:</label>\n" +
+        "<input type='url' id='season-poster-" + seasonCount + "' placeholder='https://...'>\n" +
+        "<div id='chapters-container-" + seasonCount + "'></div>\n" +
+        "<button type='button' onclick='addChapter(" + seasonCount + ")'>Agregar Capítulo</button>\n";
+      container.appendChild(seasonDiv);
+      addChapter(seasonCount);
+    }
+
+    function addChapter(seasonNum) {
+      var container = document.getElementById("chapters-container-" + seasonNum);
+      var chapterCount = container.childElementCount + 1;
+      var chapterDiv = document.createElement('div');
+      chapterDiv.className = 'chapter-container';
+      chapterDiv.innerHTML = "\n" +
+        "<label for='chapter-url-" + seasonNum + "-" + chapterCount + "'>URL del Capítulo " + chapterCount + ":</label>\n" +
+        "<input type='text' id='chapter-url-" + seasonNum + "-" + chapterCount + "' placeholder='https://...'>\n" +
+        "<label for='chapter-type-" + seasonNum + "-" + chapterCount + "'>Tipo del Capítulo:</label>\n" +
+        "<select id='chapter-type-" + seasonNum + "-" + chapterCount + "'>\n" +
+        "  <option value='Capítulo'>Capítulo</option>\n" +
+        "  <option value='Especial'>Especial</option>\n" +
+        "  <option value='OVA'>OVA</option>\n" +
+        "</select>\n";
+      container.appendChild(chapterDiv);
+    }
+
+    function generateSeriesCode() {
+      var searchType = document.getElementById('searchType').value; // 'tv' o 'movie'
+      var streamingService = document.getElementById('streamingService').value || "Netflix";
+      var seriesTitle = document.getElementById('series-title').value;
+      var globalSynopsis = document.getElementById('synopsis').value;
+      var backgroundUrl = document.getElementById('backgroundUrl').value;
+      var posterUrl = document.getElementById('posterUrl').value;
+      var tmdbId = document.getElementById('tmdbId').value;
+      var pageUrl = document.getElementById('pageUrl').value;
+      var videoUrl = document.getElementById('videoUrl').value; // campo para película
+
+      var seasonsObj = {};
+      var postersObj = {};
+      var seasonOptions = "";
+      if (searchType === 'tv') {
+        for (var i = 1; i <= seasonCount; i++) {
+          var seasonName = document.getElementById("season-name-" + i).value || ("Temporada " + i);
+          var seasonSynopsis = document.getElementById("season-synopsis-" + i).value || globalSynopsis;
+          var seasonPoster = document.getElementById("season-poster-" + i).value || posterUrl;
+          var chaptersContainer = document.getElementById("chapters-container-" + i);
+          var chapterDivs = chaptersContainer.getElementsByClassName("chapter-container");
+          var chapters = [];
+          for (var j = 0; j < chapterDivs.length; j++) {
+            var chapterUrl = document.getElementById("chapter-url-" + i + "-" + (j+1)).value;
+            var chapterType = document.getElementById("chapter-type-" + i + "-" + (j+1)).value;
+            chapters.push({ url: chapterUrl, type: chapterType });
+          }
+          seasonsObj[i] = { chapters: chapters, synopsis: seasonSynopsis, name: seasonName };
+          postersObj[i] = seasonPoster;
+          seasonOptions += "<option value='" + i + "'>Temporada " + i + "</option>\n";
+        }
+      }
+
+      var lines = [];
+      lines.push("<!DOCTYPE html>");
+      lines.push("<html lang='es'>");
+      lines.push("<head>");
+      lines.push("  <meta charset='UTF-8'>");
+      lines.push("  <meta name='viewport' content='width=device-width, initial-scale=1.0'>");
+      lines.push("  <title>" + seriesTitle + "</title>");
+      lines.push("  <style>");
+      if (searchType === 'tv') {
+        // Plantilla series.html con los estilos solicitados:
+        lines.push("    /* Estilos para la plantilla final SERIES */");
+        lines.push("    body {");
+        lines.push("      margin: 0;");
+        lines.push("      font-family: Arial, sans-serif;");
+        lines.push("      background-color: #1c1c1c;");
+        lines.push("      color: white;");
+        lines.push("      text-align: center;");
+        lines.push("    }");
+        lines.push("    .container {");
+        lines.push("      max-width: 600px;");
+        lines.push("      margin: 0 auto;");
+        lines.push("      padding: 10px;");
+        lines.push("      text-align: left;");
+        lines.push("    }");
+        lines.push("    .background-image {");
+        lines.push("      width: 100%;");
+        lines.push("      height: 250px;");
+        lines.push("      background-size: cover;");
+        lines.push("      background-position: center;");
+        lines.push("      border-radius: 5px;");
+        lines.push("      margin-bottom: 10px;");
+        lines.push("    }");
+        lines.push("    #video-player {");
+        lines.push("      width: 100%;");
+        lines.push("      height: 250px;");
+        lines.push("      display: none;");
+        lines.push("      border-radius: 5px;");
+        lines.push("      margin-bottom: 10px;");
+        lines.push("      z-index: 5;");
+        lines.push("    }");
+        lines.push("    .poster {");
+        lines.push("      width: 120px;");
+        lines.push("      height: 180px;");
+        lines.push("      border-radius: 5px;");
+        lines.push("      box-shadow: 0 4px 8px rgba(0,0,0,0.5);");
+        lines.push("      position: relative;");
+        lines.push("      margin-left: 15px;");
+        lines.push("      margin-top: -140px;");
+        lines.push("      margin-bottom: 10px;");
+        lines.push("      z-index: 2;");
+        lines.push("    }");
+        lines.push("    .buttons {");
+        lines.push("         position: relative;");
+        lines.push("         margin-top: -30px;");
+        lines.push("         margin-left: 190px;");
+        lines.push("    }");
+        lines.push("    #favorite-button {");
+        lines.push("         position: absolute;");
+        lines.push("         z-index: 3;");
+        lines.push("         background-color: #cc0033;");
+        lines.push("         color: white;");
+        lines.push("         border: 1px solid #555;");
+        lines.push("         padding: 5px 10px;");
+        lines.push("         cursor: pointer;");
+        lines.push("         font-size: 14px;");
+        lines.push("         border-radius: 5px;");
+        lines.push("         margin-left: 93px;");
+        lines.push("         margin-top: -195px;");
+        lines.push("         clear: both;");
+        lines.push("    }");
+      } else {
+        // Plantilla películas.html (dejamos intacta la mayoría, excepto el #favorite-button)
+        lines.push("    /* Estilos para la plantilla final PELÍCULAS */");
+        lines.push("    body {");
+        lines.push("      margin: 0;");
+        lines.push("      font-family: Arial, sans-serif;");
+        lines.push("      background-color: #1c1c1c;");
+        lines.push("      color: white;");
+        lines.push("      text-align: center;");
+        lines.push("    }");
+        lines.push("    .container {");
+        lines.push("      max-width: 600px;");
+        lines.push("      margin: 0 auto;");
+        lines.push("      padding: 10px;");
+        lines.push("      text-align: left;");
+        lines.push("    }");
+        lines.push("    .background-image {");
+        lines.push("      width: 100%;");
+        lines.push("      height: 250px;");
+        lines.push("      background-size: cover;");
+        lines.push("      background-position: center;");
+        lines.push("      border-radius: 5px;");
+        lines.push("      margin-bottom: 10px;");
+        lines.push("    }");
+        lines.push("    #video-player {");
+        lines.push("      width: 100%;");
+        lines.push("      height: 250px;");
+        lines.push("      display: none;");
+        lines.push("      border-radius: 5px;");
+        lines.push("      margin-bottom: 10px;");
+        lines.push("      z-index: 5;");
+        lines.push("    }");
+        lines.push("    .poster {");
+        lines.push("      width: 120px;");
+        lines.push("      height: 180px;");
+        lines.push("      border-radius: 5px;");
+        lines.push("      box-shadow: 0 4px 8px rgba(0,0,0,0.5);");
+        lines.push("      position: relative;");
+        lines.push("      margin-left: 15px;");
+        lines.push("      margin-top: -140px;");
+        lines.push("      margin-bottom: 10px;");
+        lines.push("      z-index: 2;");
+        lines.push("    }");
+        lines.push("    #favorite-button {");
+        lines.push("         position: absolute;");
+        lines.push("         z-index: 3;");
+        lines.push("         background-color: #cc0033;");
+        lines.push("         color: white;");
+        lines.push("         border: 1px solid #555;");
+        lines.push("         padding: 5px 10px;");
+        lines.push("         cursor: pointer;");
+        lines.push("         font-size: 14px;");
+        lines.push("         border-radius: 5px;");
+        lines.push("         margin-left: -40px;");
+        lines.push("         margin-top: -140px;");
+        lines.push("         clear: both;");
+        lines.push("    }");
+      }
+      // Elementos comunes para ambas plantillas:
+      lines.push("    .chapter-menu {");
+      lines.push("      display: flex;");
+      lines.push("      overflow-x: auto;");
+      lines.push("      gap: 8px;");
+      lines.push("      padding: 0 0 10px 0;");
+      lines.push("      scrollbar-width: none;");
+      lines.push("      clear: both;");
+      lines.push("      margin-left: 15px;");
+      if (searchType === 'tv') {
+        lines.push("      margin-top: 10px;");  // En series, 10px desde el póster (ya que el reproductor se muestra en su lugar)
+      }
+      lines.push("    }");
+      lines.push("    .chapter-menu::-webkit-scrollbar {");
+      lines.push("      display: none;");
+      lines.push("    }");
+      lines.push("    .chapter-button {");
+      lines.push("      background-color: #333;");
+      lines.push("      color: white;");
+      lines.push("      border: 1px solid #cc0033;");
+      lines.push("      padding: 6px 10px;");
+      lines.push("      font-size: 12px;");
+      lines.push("      border-radius: 5px;");
+      lines.push("      cursor: pointer;");
+      lines.push("      transition: 0.2s;");
+      lines.push("      white-space: nowrap;");
+      lines.push("    }");
+      lines.push("    .chapter-button:hover {");
+      lines.push("      background-color: #cc0033;");
+      lines.push("    }");
+      lines.push("    .active-chapter {");
+      lines.push("      background-color: #a30026 !important;");
+      lines.push("      border: 2px solid #ff4d6a;");
+      lines.push("    }");
+      lines.push("    .content {");
+      lines.push("      margin-top: 10px;");
+      lines.push("    }");
+      lines.push("    .title {");
+      lines.push("      font-size: 20px;");
+      lines.push("      font-weight: bold;");
+      lines.push("      margin-top: 10px;");
+      lines.push("      margin-bottom: 0;");
+      lines.push("      padding: 0 10px;");
+      lines.push("    }");
+      lines.push("    .type-line {");
+      lines.push("      font-size: 14px;");
+      lines.push("      color: #999;");
+      lines.push("      margin-top: 5px;");
+      lines.push("      margin-bottom: 10px;");
+      lines.push("      padding: 0 10px;");
+      lines.push("    }");
+      lines.push("    .synopsis {");
+      lines.push("      font-size: 14px;");
+      lines.push("      color: #bdbdbd;");
+      lines.push("      margin-top: 10px;");
+      lines.push("      margin-bottom: 10px;");
+      lines.push("      padding: 0 10px;");
+      lines.push("      clear: both;");
+      lines.push("    }");
+      lines.push("    select {");
+      lines.push("      background-color: #cc0033;");
+      lines.push("      color: white;");
+      lines.push("      border: none;");
+      lines.push("      padding: 7px;");
+      lines.push("      font-size: 14px;");
+      lines.push("      border-radius: 5px;");
+      lines.push("      cursor: pointer;");
+      lines.push("    }");
+      lines.push("  </style>");
+      lines.push("</head>");
+      lines.push("<body>");
+      lines.push("  <div class='container'>");
+      lines.push("    <div class='background-image' id='background' style='background-image: url(\"" + backgroundUrl + "\");'></div>");lines.push("    <img class='poster' id='poster' src='" + posterUrl + "' alt='Poster'>");
+      lines.push("    <iframe id='video-player' src='' frameborder='0' allowfullscreen></iframe>");
+      if (searchType === 'tv') {
+        // En series, el bloque .buttons se coloca justo debajo del reproductor con margen de 5px respecto al título (se restablece en changeSeason)
+        lines.push("    <div class='buttons'>");
+        lines.push("      <select id='season-selector' onchange='changeSeason(this.value)'>");
+        lines.push(            seasonOptions);
+        lines.push("      </select>");
+        lines.push("    </div>");
+      }
+      lines.push("    <button id='favorite-button' class='button' onclick='toggleFavorite()'>🤍</button>");
+      lines.push("    <div class='content'>");
+      lines.push("      <div class='title' id='title'>" + seriesTitle + (searchType === 'tv' && seasonsObj[1] ? " - " + seasonsObj[1].name : "") + "</div>");
+      var tipoLabel = (searchType === 'tv') ? "Serie" : "Película";
+      lines.push("      <div class='type-line' id='typeLine'>Tipo: " + tipoLabel + " | " + streamingService + "</div>");
+      if (searchType === 'tv') {
+        lines.push("      <div class='chapter-menu' id='chapter-menu'></div>");
+        var firstSynopsis = (seasonsObj[1] && seasonsObj[1].synopsis) ? seasonsObj[1].synopsis : globalSynopsis;
+        lines.push("      <div class='synopsis' id='synopsis'>" + firstSynopsis + "</div>");
+      } else {
+        lines.push("      <div class='chapter-menu' id='chapter-menu'>");
+        lines.push("        <button class='chapter-button' onclick='changeChapter(\"" + videoUrl + "\", this)'>Ver ahora</button>");
+        lines.push("      </div>");
+        lines.push("      <div class='synopsis' id='synopsis'>" + globalSynopsis + "</div>");
+      }
+      lines.push("    </div>");
+      lines.push("  </div>");
+      lines.push("  <scr"+"ipt>");
+      lines.push("    const movie = { id: '" + tmdbId + "', title: '" + seriesTitle + "', imageUrl: '" + posterUrl + "', link: '" + pageUrl + "' };");
+      if (searchType === 'tv') {
+        lines.push("    const seasons = " + JSON.stringify(seasonsObj) + ";");
+        lines.push("    const posters = " + JSON.stringify(postersObj) + ";");
+      } else {
+        lines.push("    const seasons = {};");
+        lines.push("    const posters = {};");
+      }
+      lines.push("    let currentSeason = 1;");
+      lines.push("    function changeSeason(season) {");
+      lines.push("      season = parseInt(season, 10);");
+      lines.push("      currentSeason = season;");
+      lines.push("      document.getElementById('title').textContent = movie.title + ' - ' + seasons[season].name;");
+      lines.push("      document.getElementById('synopsis').textContent = seasons[season].synopsis;");
+      lines.push("      document.getElementById('poster').src = posters[season];");
+      lines.push("      const chapterMenu = document.getElementById('chapter-menu');");
+      lines.push("      chapterMenu.innerHTML = '';");
+      lines.push("      seasons[season].chapters.forEach(function(ep, index) {");
+      lines.push("        const btn = document.createElement('button');");
+      lines.push("        btn.textContent = ep.type + ' ' + (index + 1);");
+      lines.push("        btn.className = 'chapter-button';");
+      lines.push("        btn.onclick = function() { changeChapter(ep.url, btn); };");
+      lines.push("        chapterMenu.appendChild(btn);");
+      lines.push("      });");
+      lines.push("      document.getElementById('video-player').style.display = 'none';");
+      lines.push("      document.getElementById('background').style.display = 'block';");
+      lines.push("      document.getElementById('poster').style.display = 'block';");
+      lines.push("      document.getElementById('favorite-button').style.display = 'block';");
+      lines.push("      // Restablece el margen de .buttons a su valor original");
+      lines.push("      var btns = document.getElementById('season-selector');");
+      lines.push("      if(btns && btns.parentElement) { btns.parentElement.style.marginTop = '-30px'; }");
+      lines.push("    }");
+      lines.push("    function changeChapter(url, selectedButton) {");
+      lines.push("      document.getElementById('video-player').src = url;");
+      lines.push("      document.getElementById('video-player').style.display = 'block';");
+      lines.push("      document.getElementById('background').style.display = 'none';");
+      lines.push("      document.getElementById('poster').style.display = 'none';");
+      lines.push("      document.getElementById('favorite-button').style.display = 'none';");
+      lines.push("      // Ajusta el margen de .buttons para dejar 15px de separación respecto al reproductor");
+      lines.push("      var btns = document.getElementById('season-selector');");
+      lines.push("      if(btns && btns.parentElement) { btns.parentElement.style.marginTop = '15px'; }");
+      lines.push("      var allButtons = document.querySelectorAll('.chapter-button');");
+      lines.push("      allButtons.forEach(function(btn) { btn.classList.remove('active-chapter'); });");
+      lines.push("      if (selectedButton) {");
+      lines.push("        selectedButton.classList.add('active-chapter');");
+      lines.push("      }");
+      lines.push("    }");
+      lines.push("    function toggleFavorite() {");
+      lines.push("      let favorites = JSON.parse(localStorage.getItem('favorites')) || [];");
+      lines.push("      const favBtn = document.getElementById('favorite-button');");
+      lines.push("      const isFav = favorites.some(function(f) { return f.id === movie.id; });");
+      lines.push("      if(isFav) {");
+      lines.push("        favorites = favorites.filter(function(f) { return f.id !== movie.id; });");
+      lines.push("        favBtn.textContent = '🤍';");
+      lines.push("        alert('Removido de favoritos');");
+      lines.push("      } else {");
+      lines.push("        favorites.push(movie);");
+      lines.push("        favBtn.textContent = '💓';");
+      lines.push("        alert('Agregado a favoritos');");
+      lines.push("      }");
+      lines.push("      localStorage.setItem('favorites', JSON.stringify(favorites));");
+      lines.push("    }");
+      if (searchType === 'tv') {
+        lines.push("    window.onload = function() { changeSeason(1); };");
+      } else {
+        lines.push("    // Película: no se requiere cargar temporada al inicio");
+      }
+      lines.push("  </scr"+"ipt>");
+      lines.push("</body>");
+      lines.push("</html>");
+
+      var finalCode = lines.join("\n");
+      document.getElementById('generatedCode').textContent = finalCode;
+    }
+
+    function downloadHTML() {
+      var codeText = document.getElementById('generatedCode').textContent;
+      if (!codeText) {
+        alert('Genera el código primero.');
+        return;
+      }
+      var blob = new Blob([codeText], { type: 'text/html' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'serie.html';
+      a.click();
+    }
+  </script>
+</body>
+</html>
